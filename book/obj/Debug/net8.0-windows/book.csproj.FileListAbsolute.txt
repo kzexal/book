@@ -31,3 +31,4 @@ C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\refin
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.pdb
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.genruntimeconfig.cache
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\ref\book.dll
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.sourcelink.json
