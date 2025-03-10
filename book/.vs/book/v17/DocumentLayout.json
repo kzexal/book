@@ -63,7 +63,7 @@
               "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T19:33:21.909Z",
+              "WhenOpened": "2025-03-10T16:36:33.036Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -74,7 +74,7 @@
               "RelativeDocumentMoniker": "DatabaseConnection.cs",
               "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DatabaseConnection.cs",
               "RelativeToolTip": "DatabaseConnection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAByAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T19:19:57.245Z",
               "EditorCaption": ""
@@ -87,7 +87,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAxwCIAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAUwD8AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T17:24:35.877Z",
               "EditorCaption": ""
@@ -95,15 +95,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "book",
+              "Title": "book.csproj",
               "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\book.csproj",
               "RelativeDocumentMoniker": "book.csproj",
               "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\book.csproj",
               "RelativeToolTip": "book.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-08T19:19:35.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T19:19:35.928Z"
             }
           ]
         }
