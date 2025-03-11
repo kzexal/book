@@ -40,8 +40,7 @@ namespace book
             int nam_xuat_ban = int.Parse(textboxNamXuatBan.Text);
             string nha_xuat_ban = textboxNhaXuatBan.Text;
             int so_luong = int.Parse(textboxSoLuong.Text);
-            string thoi_gian = pickThoiGianNhap.Value.ToString("yyyy - MM - dd");
-
+            DateTime thoi_gian = pickThoiGianNhap.Value;
             using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
@@ -55,7 +54,7 @@ namespace book
                     cmd.Parameters.AddWithValue("@nam", nam_xuat_ban);
                     cmd.Parameters.AddWithValue("@nxb", nha_xuat_ban);
                     cmd.Parameters.AddWithValue("@sl", so_luong);
-                    cmd.Parameters.AddWithValue("@thoigian", DateTime.Parse(thoi_gian));
+                    cmd.Parameters.AddWithValue("@thoigian", thoi_gian);
 
                     cmd.ExecuteNonQuery();
                 }
