@@ -43,6 +43,13 @@
             soluong = new Label();
             textboxSoLuong = new TextBox();
             pickThoiGianNhap = new DateTimePicker();
+            listBox1 = new ListBox();
+            listBox2 = new ListBox();
+            label2 = new Label();
+            label8 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            btnThemTacGia = new Button();
             SuspendLayout();
             // 
             // btnadd
@@ -64,21 +71,21 @@
             // 
             // textboxTacGia
             // 
-            textboxTacGia.Location = new Point(173, 51);
+            textboxTacGia.Location = new Point(25, 196);
             textboxTacGia.Name = "textboxTacGia";
             textboxTacGia.Size = new Size(125, 27);
             textboxTacGia.TabIndex = 4;
             // 
             // textboxTheLoai
             // 
-            textboxTheLoai.Location = new Point(313, 51);
+            textboxTheLoai.Location = new Point(175, 51);
             textboxTheLoai.Name = "textboxTheLoai";
             textboxTheLoai.Size = new Size(125, 27);
             textboxTheLoai.TabIndex = 5;
             // 
             // textboxNamXuatBan
             // 
-            textboxNamXuatBan.Location = new Point(454, 51);
+            textboxNamXuatBan.Location = new Point(313, 51);
             textboxNamXuatBan.Name = "textboxNamXuatBan";
             textboxNamXuatBan.Size = new Size(125, 27);
             textboxNamXuatBan.TabIndex = 6;
@@ -124,7 +131,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(454, 28);
+            label5.Location = new Point(313, 28);
             label5.Name = "label5";
             label5.Size = new Size(102, 20);
             label5.TabIndex = 12;
@@ -134,7 +141,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(313, 28);
+            label6.Location = new Point(175, 28);
             label6.Name = "label6";
             label6.Size = new Size(62, 20);
             label6.TabIndex = 13;
@@ -143,7 +150,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(173, 28);
+            label7.Location = new Point(25, 173);
             label7.Name = "label7";
             label7.Size = new Size(55, 20);
             label7.TabIndex = 14;
@@ -173,11 +180,84 @@
             pickThoiGianNhap.Size = new Size(250, 27);
             pickThoiGianNhap.TabIndex = 18;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(12, 247);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(172, 124);
+            listBox1.TabIndex = 19;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // listBox2
+            // 
+            listBox2.FormattingEnabled = true;
+            listBox2.Location = new Point(294, 247);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(167, 124);
+            listBox2.TabIndex = 21;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 226);
+            label2.Name = "label2";
+            label2.Size = new Size(126, 20);
+            label2.TabIndex = 22;
+            label2.Text = "Danh sách tác giả";
+            label2.Click += label2_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(294, 224);
+            label8.Name = "label8";
+            label8.Size = new Size(94, 20);
+            label8.TabIndex = 23;
+            label8.Text = "Tác giả chính";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(194, 264);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 24;
+            button1.Text = ">";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnChuyenSang_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(194, 308);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 25;
+            button2.Text = "<";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += btnChuyenVe_Click;
+            // 
+            // btnThemTacGia
+            // 
+            btnThemTacGia.Location = new Point(179, 196);
+            btnThemTacGia.Name = "btnThemTacGia";
+            btnThemTacGia.Size = new Size(119, 29);
+            btnThemTacGia.TabIndex = 26;
+            btnThemTacGia.Text = "Thêm tác giả";
+            btnThemTacGia.UseVisualStyleBackColor = true;
+            btnThemTacGia.Click += btnThemTacGia_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnThemTacGia);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label8);
+            Controls.Add(label2);
+            Controls.Add(listBox2);
+            Controls.Add(listBox1);
             Controls.Add(pickThoiGianNhap);
             Controls.Add(textboxSoLuong);
             Controls.Add(soluong);
@@ -216,5 +296,12 @@
         private Label soluong;
         private TextBox textboxSoLuong;
         private DateTimePicker pickThoiGianNhap;
+        private ListBox listBox1;
+        private ListBox listBox2;
+        private Label label2;
+        private Label label8;
+        private Button button1;
+        private Button button2;
+        private Button btnThemTacGia;
     }
 }
