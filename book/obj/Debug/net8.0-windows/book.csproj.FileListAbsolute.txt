@@ -24,7 +24,6 @@ C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Debug\net8.0-windows\Micro
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Debug\net8.0-windows\Npgsql.dll
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Debug\net8.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
-C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Form1.resources
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.csproj.Up2Date
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.dll
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\refint\book.dll
@@ -32,3 +31,9 @@ C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.genruntimeconfig.cache
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\ref\book.dll
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.sourcelink.json
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.BaseForm.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Properties.Resources.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.begin.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Sua.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Them.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Xoa.resources

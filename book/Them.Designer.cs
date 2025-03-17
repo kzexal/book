@@ -1,6 +1,6 @@
 ﻿namespace book
 {
-    partial class Form1
+    partial class Them
     {
         /// <summary>
         ///  Required designer variable.
@@ -54,7 +54,7 @@
             // 
             // btnadd
             // 
-            btnadd.Location = new Point(367, 409);
+            btnadd.Location = new Point(399, 342);
             btnadd.Name = "btnadd";
             btnadd.Size = new Size(94, 29);
             btnadd.TabIndex = 0;
@@ -64,35 +64,35 @@
             // 
             // textboxTenSach
             // 
-            textboxTenSach.Location = new Point(25, 51);
+            textboxTenSach.Location = new Point(62, 46);
             textboxTenSach.Name = "textboxTenSach";
             textboxTenSach.Size = new Size(125, 27);
             textboxTenSach.TabIndex = 3;
             // 
             // textboxTacGia
             // 
-            textboxTacGia.Location = new Point(25, 196);
+            textboxTacGia.Location = new Point(438, 44);
             textboxTacGia.Name = "textboxTacGia";
             textboxTacGia.Size = new Size(125, 27);
             textboxTacGia.TabIndex = 4;
             // 
             // textboxTheLoai
             // 
-            textboxTheLoai.Location = new Point(175, 51);
+            textboxTheLoai.Location = new Point(62, 120);
             textboxTheLoai.Name = "textboxTheLoai";
             textboxTheLoai.Size = new Size(125, 27);
             textboxTheLoai.TabIndex = 5;
             // 
             // textboxNamXuatBan
             // 
-            textboxNamXuatBan.Location = new Point(313, 51);
+            textboxNamXuatBan.Location = new Point(212, 122);
             textboxNamXuatBan.Name = "textboxNamXuatBan";
             textboxNamXuatBan.Size = new Size(125, 27);
             textboxNamXuatBan.TabIndex = 6;
             // 
             // textboxNhaXuatBan
             // 
-            textboxNhaXuatBan.Location = new Point(25, 124);
+            textboxNhaXuatBan.Location = new Point(62, 176);
             textboxNhaXuatBan.Name = "textboxNhaXuatBan";
             textboxNhaXuatBan.Size = new Size(125, 27);
             textboxNhaXuatBan.TabIndex = 7;
@@ -101,7 +101,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 28);
+            label1.Location = new Point(62, 23);
             label1.Name = "label1";
             label1.Size = new Size(65, 20);
             label1.TabIndex = 8;
@@ -111,7 +111,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(313, 101);
+            label3.Location = new Point(64, 220);
             label3.Name = "label3";
             label3.Size = new Size(108, 20);
             label3.TabIndex = 10;
@@ -121,7 +121,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(25, 101);
+            label4.Location = new Point(62, 150);
             label4.Name = "label4";
             label4.Size = new Size(97, 20);
             label4.TabIndex = 11;
@@ -131,7 +131,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(313, 28);
+            label5.Location = new Point(212, 99);
             label5.Name = "label5";
             label5.Size = new Size(102, 20);
             label5.TabIndex = 12;
@@ -141,7 +141,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(175, 28);
+            label6.Location = new Point(62, 97);
             label6.Name = "label6";
             label6.Size = new Size(62, 20);
             label6.TabIndex = 13;
@@ -150,7 +150,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(25, 173);
+            label7.Location = new Point(438, 21);
             label7.Name = "label7";
             label7.Size = new Size(55, 20);
             label7.TabIndex = 14;
@@ -160,7 +160,7 @@
             // soluong
             // 
             soluong.AutoSize = true;
-            soluong.Location = new Point(175, 103);
+            soluong.Location = new Point(212, 21);
             soluong.Name = "soluong";
             soluong.Size = new Size(69, 20);
             soluong.TabIndex = 16;
@@ -168,14 +168,14 @@
             // 
             // textboxSoLuong
             // 
-            textboxSoLuong.Location = new Point(173, 126);
+            textboxSoLuong.Location = new Point(212, 44);
             textboxSoLuong.Name = "textboxSoLuong";
             textboxSoLuong.Size = new Size(125, 27);
             textboxSoLuong.TabIndex = 17;
             // 
             // pickThoiGianNhap
             // 
-            pickThoiGianNhap.Location = new Point(313, 126);
+            pickThoiGianNhap.Location = new Point(62, 243);
             pickThoiGianNhap.Name = "pickThoiGianNhap";
             pickThoiGianNhap.Size = new Size(250, 27);
             pickThoiGianNhap.TabIndex = 18;
@@ -183,16 +183,16 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(12, 247);
+            listBox1.Location = new Point(435, 128);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(172, 124);
+            listBox1.Size = new Size(157, 124);
             listBox1.TabIndex = 19;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // listBox2
             // 
             listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(294, 247);
+            listBox2.Location = new Point(717, 132);
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(167, 124);
             listBox2.TabIndex = 21;
@@ -200,7 +200,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 226);
+            label2.Location = new Point(435, 100);
             label2.Name = "label2";
             label2.Size = new Size(126, 20);
             label2.TabIndex = 22;
@@ -210,7 +210,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(294, 224);
+            label8.Location = new Point(717, 109);
             label8.Name = "label8";
             label8.Size = new Size(94, 20);
             label8.TabIndex = 23;
@@ -218,9 +218,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(194, 264);
+            button1.Location = new Point(610, 132);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(94, 37);
             button1.TabIndex = 24;
             button1.Text = ">";
             button1.UseVisualStyleBackColor = true;
@@ -228,9 +228,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(194, 308);
+            button2.Location = new Point(610, 194);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(94, 37);
             button2.TabIndex = 25;
             button2.Text = "<";
             button2.UseVisualStyleBackColor = true;
@@ -238,19 +238,19 @@
             // 
             // btnThemTacGia
             // 
-            btnThemTacGia.Location = new Point(179, 196);
+            btnThemTacGia.Location = new Point(599, 44);
             btnThemTacGia.Name = "btnThemTacGia";
-            btnThemTacGia.Size = new Size(119, 29);
+            btnThemTacGia.Size = new Size(119, 37);
             btnThemTacGia.TabIndex = 26;
             btnThemTacGia.Text = "Thêm tác giả";
             btnThemTacGia.UseVisualStyleBackColor = true;
             btnThemTacGia.Click += btnThemTacGia_Click;
             // 
-            // Form1
+            // Them
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(971, 383);
             Controls.Add(btnThemTacGia);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -273,8 +273,8 @@
             Controls.Add(textboxTacGia);
             Controls.Add(textboxTenSach);
             Controls.Add(btnadd);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Them";
+            Text = "Thêm";
             ResumeLayout(false);
             PerformLayout();
         }

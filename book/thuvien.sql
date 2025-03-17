@@ -7,7 +7,7 @@ nha_xuat_ban varchar(100),
 Thoi_gian DATE NOT NULL 
 );
 
-alter table Tua_Sach add column so_luong int NOT NULL;
+alter table Tua_Sach add column trang_thai BOOLEAN;
 
 CREATE TABLE Tac_Gia (
     id_tac_gia BIGSERIAL PRIMARY KEY ,
@@ -20,10 +20,6 @@ CREATE TABLE TuaSach_TacGia (
     tac_gia_chinh BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (id_tua_sach, id_tac_gia)
 );
-
-
-
-
 
 select * from Tua_Sach;
 

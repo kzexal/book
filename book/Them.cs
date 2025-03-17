@@ -2,9 +2,9 @@
 
 namespace book
 {
-    public partial class Form1 : Form
+    public partial class Them : BaseForm
     {
-        public Form1()
+        public Them()
         {
             InitializeComponent();
         }
