@@ -25,13 +25,24 @@ namespace book
             using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT id_tua_sach, ten_sach, the_loai, nam_xuat_ban, nha_xuat_ban, so_luong, trang_thai, thoi_gian FROM tua_sach WHERE trang_thai = TRUE";
-
+                string query = "SELECT id_tua_sach, ten_sach, the_loai, nam_xuat_ban, nha_xuat_ban, so_luong, trang_thai, thoi_gian FROM tua_sach";
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, conn))
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-                    dataGridViewBooks.DataSource = dt; // Hiển thị dữ liệu lên DataGridView
+
+                    // Gán nguồn dữ liệu
+                    dataGridViewBooks.DataSource = dt;
+
+                    // Đặt tiêu đề cột
+                    dataGridViewBooks.Columns["id_tua_sach"].HeaderText = "ID";
+                    dataGridViewBooks.Columns["ten_sach"].HeaderText = "Tên sách";
+                    dataGridViewBooks.Columns["the_loai"].HeaderText = "Thể loại";
+                    dataGridViewBooks.Columns["nam_xuat_ban"].HeaderText = "Năm xuất bản";
+                    dataGridViewBooks.Columns["nha_xuat_ban"].HeaderText = "Nhà xuất bản";
+                    dataGridViewBooks.Columns["so_luong"].HeaderText = "Số lượng";
+                    dataGridViewBooks.Columns["trang_thai"].HeaderText = "Trạng thái";
+                    dataGridViewBooks.Columns["thoi_gian"].HeaderText = "Thời Gian Nhập";
                 }
             }
         }
@@ -39,20 +50,18 @@ namespace book
         private void btnThem_Click(object sender, EventArgs e)
         {
             Them formAdd = new Them();
-            formAdd.ShowDialog();
+            formAdd.Show();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            dataGridViewBooks.Columns["ID"].ReadOnly = true;
+            dataGridViewBooks.Columns["id_tua_sach"].ReadOnly = true;
             if (dataGridViewBooks.SelectedRows.Count > 0)
             {
-                // Lấy ID của sách được chọn
-                int idTuaSach = Convert.ToInt32(dataGridViewBooks.SelectedRows[0].Cells["ID"].Value);
+                int idTuaSach = Convert.ToInt32(dataGridViewBooks.SelectedRows[0].Cells["id_tua_sach"].Value);
 
-                // Mở form sửa và truyền ID sách vào
                 Sua formSua = new Sua(idTuaSach);
-                formSua.ShowDialog();
+                formSua.Show();
             }
         }
 
@@ -84,7 +93,7 @@ namespace book
         private void btnDanhsachdaxoa_Click(object sender, EventArgs e)
         {
             Deleted daxoa = new Deleted();
-            daxoa.ShowDialog();
+            daxoa.Show();
         }
     }
 }

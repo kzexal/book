@@ -31,7 +31,6 @@ namespace book
 
         private void ThemTacGiaVaoDatabase(NpgsqlConnection conn, long id_tua_sach, string tac_gia, bool tac_gia_chinh)
         {
-            // Kiểm tra hoặc thêm tác giả vào bảng tac_gia
             string queryTacGia = "INSERT INTO tac_gia (ten_tac_gia) VALUES (@tacgia) " +
                                  "ON CONFLICT (ten_tac_gia) DO NOTHING RETURNING id_tac_gia";
             long id_tac_gia;
@@ -55,7 +54,6 @@ namespace book
                 }
             }
 
-            // Thêm quan hệ giữa tác giả và sách
             string queryLienKet = "INSERT INTO TuaSach_TacGia (id_tua_sach, id_tac_gia, tac_gia_chinh) " +
                                   "VALUES (@idSach, @idTacGia, @tacGiaChinh)";
             using (NpgsqlCommand cmdLienKet = new NpgsqlCommand(queryLienKet, conn))
@@ -81,45 +79,35 @@ namespace book
                 conn.Open();
                 NpgsqlTransaction transaction = conn.BeginTransaction();
 
-                try
+                string querySach = "INSERT INTO tua_sach (ten_sach, the_loai, nam_xuat_ban, nha_xuat_ban, so_luong, thoi_gian, trang_thai) " +
+                                   "VALUES (@ten, @theloai, @nam, @nxb, @sl, @thoigian, TRUE) RETURNING id_tua_sach";
+                long id_tua_sach;
+                using (NpgsqlCommand cmdSach = new NpgsqlCommand(querySach, conn))
                 {
-                    // 1️⃣ Thêm sách vào bảng tua_sach với trạng thái mặc định là TRUE
-                    string querySach = "INSERT INTO tua_sach (ten_sach, the_loai, nam_xuat_ban, nha_xuat_ban, so_luong, thoi_gian, trang_thai) " +
-                                       "VALUES (@ten, @theloai, @nam, @nxb, @sl, @thoigian, TRUE) RETURNING id_tua_sach";
-                    long id_tua_sach;
-                    using (NpgsqlCommand cmdSach = new NpgsqlCommand(querySach, conn))
-                    {
-                        cmdSach.Parameters.AddWithValue("@ten", ten_sach);
-                        cmdSach.Parameters.AddWithValue("@theloai", the_loai);
-                        cmdSach.Parameters.AddWithValue("@nam", nam_xuat_ban);
-                        cmdSach.Parameters.AddWithValue("@nxb", nha_xuat_ban);
-                        cmdSach.Parameters.AddWithValue("@sl", so_luong);
-                        cmdSach.Parameters.AddWithValue("@thoigian", thoi_gian);
-                        id_tua_sach = Convert.ToInt64(cmdSach.ExecuteScalar());
-                    }
-
-                    // 2️⃣ Thêm tác giả phụ từ listBox1 (tac_gia_chinh = false)
-                    foreach (var item in listBox1.Items)
-                    {
-                        string tac_gia = item.ToString();
-                        ThemTacGiaVaoDatabase(conn, id_tua_sach, tac_gia, false);
-                    }
-
-                    // 3️⃣ Thêm tác giả chính từ listBox2 (tac_gia_chinh = true)
-                    foreach (var item in listBox2.Items)
-                    {
-                        string tac_gia = item.ToString();
-                        ThemTacGiaVaoDatabase(conn, id_tua_sach, tac_gia, true);
-                    }
-
-                    transaction.Commit();
-                    MessageBox.Show($"Thêm sách '{ten_sach}' thành công!");
+                    cmdSach.Parameters.AddWithValue("@ten", ten_sach);
+                    cmdSach.Parameters.AddWithValue("@theloai", the_loai);
+                    cmdSach.Parameters.AddWithValue("@nam", nam_xuat_ban);
+                    cmdSach.Parameters.AddWithValue("@nxb", nha_xuat_ban);
+                    cmdSach.Parameters.AddWithValue("@sl", so_luong);
+                    cmdSach.Parameters.AddWithValue("@thoigian", thoi_gian);
+                    id_tua_sach = Convert.ToInt64(cmdSach.ExecuteScalar());
                 }
-                catch (Exception ex)
+
+                foreach (var item in listBox1.Items)
                 {
-                    transaction.Rollback();
-                    MessageBox.Show("Lỗi khi thêm sách: " + ex.Message);
+                    string tac_gia = item.ToString();
+                    ThemTacGiaVaoDatabase(conn, id_tua_sach, tac_gia, false);
                 }
+
+                // 3️⃣ Thêm tác giả chính từ listBox2 (tac_gia_chinh = true)
+                foreach (var item in listBox2.Items)
+                {
+                    string tac_gia = item.ToString();
+                    ThemTacGiaVaoDatabase(conn, id_tua_sach, tac_gia, true);
+                }
+
+                transaction.Commit();
+                MessageBox.Show($"Thêm sách '{ten_sach}' thành công!");
             }
         }
 

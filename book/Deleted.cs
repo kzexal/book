@@ -16,10 +16,10 @@ namespace book
         public Deleted()
         {
             InitializeComponent();
-            LoadBookList();
+            Hienthisachdaxoa();
         }
 
-        private void LoadBookList()
+        private void Hienthisachdaxoa()
         {
             using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
             {
@@ -52,8 +52,6 @@ namespace book
                         cmd.ExecuteNonQuery();
                     }
                 }
-
-                LoadBookList(); // Cập nhật lại danh sách
             }
         }
     }
