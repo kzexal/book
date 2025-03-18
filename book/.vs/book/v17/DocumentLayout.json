@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\sua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\deleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:deleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\deleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:deleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\sua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:sua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\xoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:xoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\sua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:sua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -52,7 +56,7 @@
               "RelativeDocumentMoniker": "Sua.cs",
               "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Sua.cs",
               "RelativeToolTip": "Sua.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwEwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAA3wEwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T14:29:17.438Z",
               "IsPinned": true,
@@ -68,32 +72,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Xoa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Xoa.cs",
-              "RelativeDocumentMoniker": "Xoa.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Xoa.cs [Design]",
-              "RelativeToolTip": "Xoa.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "begin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
+              "RelativeDocumentMoniker": "begin.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs [Design]",
+              "RelativeToolTip": "begin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T15:14:13.428Z",
+              "WhenOpened": "2025-03-18T12:40:47.512Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Them.cs",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Them.cs",
-              "RelativeDocumentMoniker": "Them.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Them.cs",
-              "RelativeToolTip": "Them.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwBMAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Deleted.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Deleted.cs",
+              "RelativeDocumentMoniker": "Deleted.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Deleted.cs",
+              "RelativeToolTip": "Deleted.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwDsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T14:39:57.877Z",
+              "WhenOpened": "2025-03-18T12:34:41.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "begin.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
+              "RelativeDocumentMoniker": "begin.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
+              "RelativeToolTip": "begin.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAqwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T04:03:17.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Sua.cs [Design]",
               "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Sua.cs",
               "RelativeDocumentMoniker": "Sua.cs",
@@ -105,7 +122,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "Deleted.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Deleted.cs",
+              "RelativeDocumentMoniker": "Deleted.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Deleted.cs [Design]",
+              "RelativeToolTip": "Deleted.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:14:13.428Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\BaseForm.cs",
+              "RelativeDocumentMoniker": "BaseForm.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\BaseForm.cs [Design]",
+              "RelativeToolTip": "BaseForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T04:30:30.932Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Them.cs [Design]",
               "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Them.cs",
               "RelativeDocumentMoniker": "Them.cs",
@@ -117,36 +158,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "BaseForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\BaseForm.cs",
-              "RelativeDocumentMoniker": "BaseForm.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\BaseForm.cs [Design]",
-              "RelativeToolTip": "BaseForm.cs [Design]",
+              "Title": "Them.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Them.cs",
+              "RelativeDocumentMoniker": "Them.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\Them.cs",
+              "RelativeToolTip": "Them.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAowHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T04:30:30.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "begin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
-              "RelativeDocumentMoniker": "begin.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs [Design]",
-              "RelativeToolTip": "begin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T04:02:24.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "begin.cs",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
-              "RelativeDocumentMoniker": "begin.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
-              "RelativeToolTip": "begin.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAkwCgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T04:03:17.739Z"
+              "WhenOpened": "2025-03-17T14:39:57.877Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -13,7 +13,7 @@
     <Compile Update="Them.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Xoa.cs">
+    <Compile Update="Deleted.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

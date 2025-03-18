@@ -83,9 +83,9 @@ namespace book
 
                 try
                 {
-                    // 1️⃣ Thêm sách vào bảng tua_sach
-                    string querySach = "INSERT INTO tua_sach (ten_sach, the_loai, nam_xuat_ban, nha_xuat_ban, so_luong, thoi_gian) " +
-                                       "VALUES (@ten, @theloai, @nam, @nxb, @sl, @thoigian) RETURNING id_tua_sach";
+                    // 1️⃣ Thêm sách vào bảng tua_sach với trạng thái mặc định là TRUE
+                    string querySach = "INSERT INTO tua_sach (ten_sach, the_loai, nam_xuat_ban, nha_xuat_ban, so_luong, thoi_gian, trang_thai) " +
+                                       "VALUES (@ten, @theloai, @nam, @nxb, @sl, @thoigian, TRUE) RETURNING id_tua_sach";
                     long id_tua_sach;
                     using (NpgsqlCommand cmdSach = new NpgsqlCommand(querySach, conn))
                     {

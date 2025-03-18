@@ -36,4 +36,4 @@ C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.begin.resources
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Sua.resources
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Them.resources
-C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Xoa.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Deleted.resources

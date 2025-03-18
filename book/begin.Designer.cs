@@ -33,6 +33,7 @@
             btnXoa = new Button();
             dataGridViewBooks = new DataGridView();
             btnLamMoi = new Button();
+            btnDanhsachdaxoa = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooks).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(354, 321);
+            btnXoa.Location = new Point(363, 294);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 2;
@@ -85,11 +86,22 @@
             btnLamMoi.UseVisualStyleBackColor = true;
             btnLamMoi.Click += btnLamMoi_Click;
             // 
+            // btnDanhsachdaxoa
+            // 
+            btnDanhsachdaxoa.Location = new Point(330, 342);
+            btnDanhsachdaxoa.Name = "btnDanhsachdaxoa";
+            btnDanhsachdaxoa.Size = new Size(149, 29);
+            btnDanhsachdaxoa.TabIndex = 5;
+            btnDanhsachdaxoa.Text = "Danh sách đã xoá";
+            btnDanhsachdaxoa.UseVisualStyleBackColor = true;
+            btnDanhsachdaxoa.Click += btnDanhsachdaxoa_Click;
+            // 
             // begin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
+            Controls.Add(btnDanhsachdaxoa);
             Controls.Add(btnLamMoi);
             Controls.Add(dataGridViewBooks);
             Controls.Add(btnXoa);
@@ -108,5 +120,6 @@
         private Button btnXoa;
         private DataGridView dataGridViewBooks;
         private Button btnLamMoi;
+        private Button btnDanhsachdaxoa;
     }
 }
