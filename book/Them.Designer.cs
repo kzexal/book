@@ -78,14 +78,14 @@
             // 
             // textboxTheLoai
             // 
-            textboxTheLoai.Location = new Point(62, 120);
+            textboxTheLoai.Location = new Point(62, 106);
             textboxTheLoai.Name = "textboxTheLoai";
             textboxTheLoai.Size = new Size(125, 27);
             textboxTheLoai.TabIndex = 5;
             // 
             // textboxNamXuatBan
             // 
-            textboxNamXuatBan.Location = new Point(212, 122);
+            textboxNamXuatBan.Location = new Point(212, 106);
             textboxNamXuatBan.Name = "textboxNamXuatBan";
             textboxNamXuatBan.Size = new Size(125, 27);
             textboxNamXuatBan.TabIndex = 6;
@@ -131,7 +131,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(212, 99);
+            label5.Location = new Point(212, 83);
             label5.Name = "label5";
             label5.Size = new Size(102, 20);
             label5.TabIndex = 12;
@@ -141,7 +141,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(62, 97);
+            label6.Location = new Point(62, 83);
             label6.Name = "label6";
             label6.Size = new Size(62, 20);
             label6.TabIndex = 13;

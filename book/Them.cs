@@ -31,31 +31,36 @@ namespace book
 
         private void ThemTacGiaVaoDatabase(NpgsqlConnection conn, long id_tua_sach, string tac_gia, bool tac_gia_chinh)
         {
-            string queryTacGia = "INSERT INTO tac_gia (ten_tac_gia) VALUES (@tacgia) " +
-                                 "ON CONFLICT (ten_tac_gia) DO NOTHING RETURNING id_tac_gia";
+            // Kiểm tra xem tác giả có tồn tại chưa
+            string queryCheckExist = "SELECT id_tac_gia FROM tac_gia WHERE ten_tac_gia = @tacgia";
             long id_tac_gia;
-            using (NpgsqlCommand cmdTacGia = new NpgsqlCommand(queryTacGia, conn))
+
+            using (NpgsqlCommand cmdCheckExist = new NpgsqlCommand(queryCheckExist, conn))
             {
-                cmdTacGia.Parameters.AddWithValue("@tacgia", tac_gia);
-                object result = cmdTacGia.ExecuteScalar();
+                cmdCheckExist.Parameters.AddWithValue("@tacgia", tac_gia);
+                object result = cmdCheckExist.ExecuteScalar();
 
                 if (result == null)
                 {
-                    string getIdTacGia = "SELECT id_tac_gia FROM tac_gia WHERE ten_tac_gia = @tacgia";
-                    using (NpgsqlCommand cmdGetId = new NpgsqlCommand(getIdTacGia, conn))
+                    // Nếu tác giả chưa tồn tại, thêm mới tác giả vào bảng tac_gia
+                    string queryTacGia = "INSERT INTO tac_gia (ten_tac_gia) VALUES (@tacgia) RETURNING id_tac_gia";
+                    using (NpgsqlCommand cmdTacGia = new NpgsqlCommand(queryTacGia, conn))
                     {
-                        cmdGetId.Parameters.AddWithValue("@tacgia", tac_gia);
-                        id_tac_gia = Convert.ToInt64(cmdGetId.ExecuteScalar());
+                        cmdTacGia.Parameters.AddWithValue("@tacgia", tac_gia);
+                        id_tac_gia = (long)cmdTacGia.ExecuteScalar();
                     }
                 }
                 else
                 {
+                    // Nếu tác giả đã tồn tại, lấy id của tác giả
                     id_tac_gia = (long)result;
                 }
             }
 
+            // Thêm liên kết giữa sách và tác giả vào bảng TuaSach_TacGia
             string queryLienKet = "INSERT INTO TuaSach_TacGia (id_tua_sach, id_tac_gia, tac_gia_chinh) " +
                                   "VALUES (@idSach, @idTacGia, @tacGiaChinh)";
+
             using (NpgsqlCommand cmdLienKet = new NpgsqlCommand(queryLienKet, conn))
             {
                 cmdLienKet.Parameters.AddWithValue("@idSach", id_tua_sach);
@@ -92,18 +97,35 @@ namespace book
                     cmdSach.Parameters.AddWithValue("@thoigian", thoi_gian);
                     id_tua_sach = Convert.ToInt64(cmdSach.ExecuteScalar());
                 }
-
+                // Thêm tác giả chính từ listBox2
+                foreach (var item in listBox2.Items)
+                {
+                    string tac_gia = item.ToString();
+                    ThemTacGiaVaoDatabase(conn, id_tua_sach, tac_gia, true);
+                }
+                // Thêm các tác giả phụ từ listBox1
                 foreach (var item in listBox1.Items)
                 {
                     string tac_gia = item.ToString();
                     ThemTacGiaVaoDatabase(conn, id_tua_sach, tac_gia, false);
                 }
 
-                // 3️⃣ Thêm tác giả chính từ listBox2 (tac_gia_chinh = true)
-                foreach (var item in listBox2.Items)
+                // Sau khi thêm sách vào bảng "Tua_Sach", thêm các đầu sách vào bảng "Dau_Sach"
+                for (int i = 0; i < so_luong; i++)
                 {
-                    string tac_gia = item.ToString();
-                    ThemTacGiaVaoDatabase(conn, id_tua_sach, tac_gia, true);
+                    // Tạo mã đầu sách theo định dạng TS{id_tua_sach}{id_dau_sach}
+                    string ma_dau_sach = $"TS{id_tua_sach}{i + 1}"; // Tạo mã đầu sách với id_tua_sach và số thứ tự đầu sách
+
+                    // Thêm bản sao (đầu sách) vào bảng "Dau_Sach"
+                    string queryDauSach = "INSERT INTO Dau_Sach (id_tua_sach, ma_dau_sach, trang_thai, ngay_nhap) " +
+                                           "VALUES (@idTuaSach, @maDauSach, TRUE, CURRENT_DATE)";
+
+                    using (NpgsqlCommand cmdDauSach = new NpgsqlCommand(queryDauSach, conn))
+                    {
+                        cmdDauSach.Parameters.AddWithValue("@idTuaSach", id_tua_sach);
+                        cmdDauSach.Parameters.AddWithValue("@maDauSach", ma_dau_sach);
+                        cmdDauSach.ExecuteNonQuery();
+                    }
                 }
 
                 transaction.Commit();

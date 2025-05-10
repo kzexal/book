@@ -25,7 +25,23 @@ namespace book
             using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT id_tua_sach, ten_sach, the_loai, nam_xuat_ban, nha_xuat_ban, so_luong, trang_thai, thoi_gian FROM tua_sach";
+                string query = @"
+SELECT
+    ts.id_tua_sach,
+    ts.ten_sach,
+    ts.the_loai,
+    STRING_AGG(tg.ten_tac_gia, ', ') AS tac_gia,
+    ts.nam_xuat_ban,
+    ts.nha_xuat_ban,
+    ts.so_luong,
+    ts.trang_thai,
+    ts.thoi_gian
+FROM Tua_Sach ts
+LEFT JOIN TuaSach_TacGia tgts ON tgts.id_tua_sach = ts.id_tua_sach
+LEFT JOIN Tac_Gia tg ON tg.id_tac_gia = tgts.id_tac_gia
+WHERE ts.trang_thai = TRUE
+GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_ban, ts.so_luong, ts.trang_thai, ts.thoi_gian";
+
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, conn))
                 {
                     DataTable dt = new DataTable();
@@ -38,6 +54,7 @@ namespace book
                     dataGridViewBooks.Columns["id_tua_sach"].HeaderText = "ID";
                     dataGridViewBooks.Columns["ten_sach"].HeaderText = "Tên sách";
                     dataGridViewBooks.Columns["the_loai"].HeaderText = "Thể loại";
+                    dataGridViewBooks.Columns["tac_gia"].HeaderText = "Tác giả";
                     dataGridViewBooks.Columns["nam_xuat_ban"].HeaderText = "Năm xuất bản";
                     dataGridViewBooks.Columns["nha_xuat_ban"].HeaderText = "Nhà xuất bản";
                     dataGridViewBooks.Columns["so_luong"].HeaderText = "Số lượng";
@@ -83,6 +100,7 @@ namespace book
                     }
                 }
             }
+            LoadBookList();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -94,6 +112,12 @@ namespace book
         {
             Deleted daxoa = new Deleted();
             daxoa.Show();
+        }
+
+        private void btnDauSach_Click(object sender, EventArgs e)
+        {
+            DauSach formDauSach = new DauSach();
+            formDauSach.Show();
         }
     }
 }

@@ -7,6 +7,9 @@
     <Compile Update="begin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DauSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Sua.cs">
       <SubType>Form</SubType>
     </Compile>

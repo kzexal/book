@@ -34,6 +34,7 @@
             dataGridViewBooks = new DataGridView();
             btnLamMoi = new Button();
             btnDanhsachdaxoa = new Button();
+            btnDauSach = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooks).BeginInit();
             SuspendLayout();
             // 
@@ -69,6 +70,9 @@
             // 
             // dataGridViewBooks
             // 
+            dataGridViewBooks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewBooks.BackgroundColor = Color.Gainsboro;
+            dataGridViewBooks.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dataGridViewBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewBooks.Location = new Point(12, 49);
             dataGridViewBooks.Name = "dataGridViewBooks";
@@ -96,11 +100,22 @@
             btnDanhsachdaxoa.UseVisualStyleBackColor = true;
             btnDanhsachdaxoa.Click += btnDanhsachdaxoa_Click;
             // 
+            // btnDauSach
+            // 
+            btnDauSach.Location = new Point(628, 321);
+            btnDauSach.Name = "btnDauSach";
+            btnDauSach.Size = new Size(94, 29);
+            btnDauSach.TabIndex = 6;
+            btnDauSach.Text = "Đầu sách";
+            btnDauSach.UseVisualStyleBackColor = true;
+            btnDauSach.Click += btnDauSach_Click;
+            // 
             // begin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
+            Controls.Add(btnDauSach);
             Controls.Add(btnDanhsachdaxoa);
             Controls.Add(btnLamMoi);
             Controls.Add(dataGridViewBooks);
@@ -121,5 +136,6 @@
         private DataGridView dataGridViewBooks;
         private Button btnLamMoi;
         private Button btnDanhsachdaxoa;
+        private Button btnDauSach;
     }
 }
