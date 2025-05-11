@@ -1,6 +1,6 @@
 ﻿namespace book
 {
-    partial class Them
+    partial class ThemTuaSach
     {
         /// <summary>
         ///  Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace book
 {
-    partial class Sua
+    partial class ThemDauSach
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnLuu = new Button();
             btnThemTacGia = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -50,18 +49,8 @@
             textboxTheLoai = new TextBox();
             textboxTacGia = new TextBox();
             textboxTenSach = new TextBox();
-            textboxIDTuasach = new TextBox();
+            btnadd = new Button();
             SuspendLayout();
-            // 
-            // btnLuu
-            // 
-            btnLuu.Location = new Point(425, 342);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(94, 29);
-            btnLuu.TabIndex = 0;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
-            btnLuu.Click += btnLuu_Click;
             // 
             // btnThemTacGia
             // 
@@ -159,7 +148,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(74, 92);
+            label6.Location = new Point(74, 78);
             label6.Name = "label6";
             label6.Size = new Size(62, 20);
             label6.TabIndex = 37;
@@ -168,7 +157,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(224, 94);
+            label5.Location = new Point(224, 78);
             label5.Name = "label5";
             label5.Size = new Size(102, 20);
             label5.TabIndex = 36;
@@ -210,14 +199,14 @@
             // 
             // textboxNamXuatBan
             // 
-            textboxNamXuatBan.Location = new Point(224, 117);
+            textboxNamXuatBan.Location = new Point(224, 101);
             textboxNamXuatBan.Name = "textboxNamXuatBan";
             textboxNamXuatBan.Size = new Size(125, 27);
             textboxNamXuatBan.TabIndex = 31;
             // 
             // textboxTheLoai
             // 
-            textboxTheLoai.Location = new Point(74, 115);
+            textboxTheLoai.Location = new Point(74, 101);
             textboxTheLoai.Name = "textboxTheLoai";
             textboxTheLoai.Size = new Size(125, 27);
             textboxTheLoai.TabIndex = 30;
@@ -236,19 +225,20 @@
             textboxTenSach.Size = new Size(125, 27);
             textboxTenSach.TabIndex = 28;
             // 
-            // textboxIDTuasach
+            // btnadd
             // 
-            textboxIDTuasach.Location = new Point(74, 302);
-            textboxIDTuasach.Name = "textboxIDTuasach";
-            textboxIDTuasach.Size = new Size(125, 27);
-            textboxIDTuasach.TabIndex = 49;
+            btnadd.Location = new Point(411, 337);
+            btnadd.Name = "btnadd";
+            btnadd.Size = new Size(94, 29);
+            btnadd.TabIndex = 27;
+            btnadd.Text = "Thêm";
+            btnadd.UseVisualStyleBackColor = true;
             // 
-            // Sua
+            // ThemDauSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
-            Controls.Add(textboxIDTuasach);
             Controls.Add(btnThemTacGia);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -270,16 +260,15 @@
             Controls.Add(textboxTheLoai);
             Controls.Add(textboxTacGia);
             Controls.Add(textboxTenSach);
-            Controls.Add(btnLuu);
-            Name = "Sua";
-            Text = "Sua";
+            Controls.Add(btnadd);
+            Name = "ThemDauSach";
+            Text = "ThemDauSach";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btnLuu;
         private Button btnThemTacGia;
         private Button button2;
         private Button button1;
@@ -301,6 +290,6 @@
         private TextBox textboxTheLoai;
         private TextBox textboxTacGia;
         private TextBox textboxTenSach;
-        private TextBox textboxIDTuasach;
+        private Button btnadd;
     }
 }

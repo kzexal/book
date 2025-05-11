@@ -10,13 +10,22 @@
     <Compile Update="DauSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Sua.cs">
+    <Compile Update="DaXoaDauSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Them.cs">
+    <Compile Update="SuaDauSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Deleted.cs">
+    <Compile Update="SuaTuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ThemDauSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ThemTuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DaXoaTuaSach.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

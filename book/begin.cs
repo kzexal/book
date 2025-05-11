@@ -66,7 +66,7 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Them formAdd = new Them();
+            ThemTuaSach formAdd = new ThemTuaSach();
             formAdd.Show();
         }
 
@@ -77,7 +77,8 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
             {
                 int idTuaSach = Convert.ToInt32(dataGridViewBooks.SelectedRows[0].Cells["id_tua_sach"].Value);
 
-                Sua formSua = new Sua(idTuaSach);
+                // Pass LoadBookList as the refresh callback
+                SuaTuaSach formSua = new SuaTuaSach(idTuaSach, LoadBookList);
                 formSua.Show();
             }
         }
@@ -110,7 +111,8 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
 
         private void btnDanhsachdaxoa_Click(object sender, EventArgs e)
         {
-            Deleted daxoa = new Deleted();
+            // Pass LoadBookList as the refresh callback
+            DaXoaTuaSach daxoa = new DaXoaTuaSach(LoadBookList);
             daxoa.Show();
         }
 

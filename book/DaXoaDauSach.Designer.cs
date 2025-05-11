@@ -1,6 +1,6 @@
 ﻿namespace book
 {
-    partial class Deleted
+    partial class DaXoaDauSach
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Danhsachdaxoa = new DataGridView();
             btnKhoiphuc = new Button();
+            Danhsachdaxoa = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)Danhsachdaxoa).BeginInit();
             SuspendLayout();
+            // 
+            // btnKhoiphuc
+            // 
+            btnKhoiphuc.Location = new Point(384, 342);
+            btnKhoiphuc.Name = "btnKhoiphuc";
+            btnKhoiphuc.Size = new Size(94, 29);
+            btnKhoiphuc.TabIndex = 3;
+            btnKhoiphuc.Text = "Khôi phục";
+            btnKhoiphuc.UseVisualStyleBackColor = true;
             // 
             // Danhsachdaxoa
             // 
             Danhsachdaxoa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Danhsachdaxoa.Location = new Point(21, 33);
+            Danhsachdaxoa.Location = new Point(12, 42);
             Danhsachdaxoa.Name = "Danhsachdaxoa";
             Danhsachdaxoa.RowHeadersWidth = 51;
             Danhsachdaxoa.Size = new Size(938, 218);
-            Danhsachdaxoa.TabIndex = 0;
+            Danhsachdaxoa.TabIndex = 2;
             // 
-            // btnKhoiphuc
-            // 
-            btnKhoiphuc.Location = new Point(393, 333);
-            btnKhoiphuc.Name = "btnKhoiphuc";
-            btnKhoiphuc.Size = new Size(94, 29);
-            btnKhoiphuc.TabIndex = 1;
-            btnKhoiphuc.Text = "Khôi phục";
-            btnKhoiphuc.UseVisualStyleBackColor = true;
-            btnKhoiphuc.Click += btnKhoiphuc_Click;
-            // 
-            // Deleted
+            // DaXoaDauSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
             Controls.Add(btnKhoiphuc);
             Controls.Add(Danhsachdaxoa);
-            Name = "Deleted";
-            Text = "Xoa";
+            Name = "DaXoaDauSach";
+            Text = "DaXoaDauSach";
             ((System.ComponentModel.ISupportInitialize)Danhsachdaxoa).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView Danhsachdaxoa;
         private Button btnKhoiphuc;
+        private DataGridView Danhsachdaxoa;
     }
 }

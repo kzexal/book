@@ -34,7 +34,10 @@ C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.BaseForm.resources
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Properties.Resources.resources
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.begin.resources
-C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Sua.resources
-C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Them.resources
-C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.Deleted.resources
 C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.DauSach.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.SuaTuaSach.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.ThemTuaSach.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.ThemDauSach.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.SuaDauSach.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.DaXoaDauSach.resources
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\obj\Debug\net8.0-windows\book.DaXoaTuaSach.resources

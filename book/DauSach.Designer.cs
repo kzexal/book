@@ -34,8 +34,6 @@
             btnXoaDauSach = new Button();
             btnDanhSachDaXoaDauSach = new Button();
             btnLamMoiDauSach = new Button();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDauSach).BeginInit();
             SuspendLayout();
             // 
@@ -47,7 +45,7 @@
             dataGridViewDauSach.Location = new Point(12, 22);
             dataGridViewDauSach.Name = "dataGridViewDauSach";
             dataGridViewDauSach.RowHeadersWidth = 51;
-            dataGridViewDauSach.Size = new Size(947, 164);
+            dataGridViewDauSach.Size = new Size(947, 255);
             dataGridViewDauSach.TabIndex = 0;
             // 
             // btnThemDauSach
@@ -100,29 +98,11 @@
             btnLamMoiDauSach.UseVisualStyleBackColor = true;
             btnLamMoiDauSach.Click += btnLamMoiDauSach_Click;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(65, 211);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(287, 211);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 7;
-            // 
             // DauSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
             Controls.Add(btnLamMoiDauSach);
             Controls.Add(btnDanhSachDaXoaDauSach);
             Controls.Add(btnXoaDauSach);
@@ -143,7 +123,5 @@
         private Button btnXoaDauSach;
         private Button btnDanhSachDaXoaDauSach;
         private Button btnLamMoiDauSach;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
     }
 }
