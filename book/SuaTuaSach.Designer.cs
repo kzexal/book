@@ -52,6 +52,7 @@
             textboxTenSach = new TextBox();
             textboxIDTuasach = new TextBox();
             IDTuaSach = new Label();
+            btnXoaTacGia = new Button();
             SuspendLayout();
             // 
             // btnLuu
@@ -257,11 +258,22 @@
             IDTuaSach.Text = "IDTuaSach";
             IDTuaSach.Click += label9_Click;
             // 
-            // Sua
+            // btnXoaTacGia
+            // 
+            btnXoaTacGia.Location = new Point(622, 300);
+            btnXoaTacGia.Name = "btnXoaTacGia";
+            btnXoaTacGia.Size = new Size(94, 29);
+            btnXoaTacGia.TabIndex = 51;
+            btnXoaTacGia.Text = "Xoá tác giả";
+            btnXoaTacGia.UseVisualStyleBackColor = true;
+            btnXoaTacGia.Click += btnXoaTacGia_Click;
+            // 
+            // SuaTuaSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
+            Controls.Add(btnXoaTacGia);
             Controls.Add(IDTuaSach);
             Controls.Add(textboxIDTuasach);
             Controls.Add(btnThemTacGia);
@@ -286,7 +298,7 @@
             Controls.Add(textboxTacGia);
             Controls.Add(textboxTenSach);
             Controls.Add(btnLuu);
-            Name = "Sua";
+            Name = "SuaTuaSach";
             Text = "Sua";
             ResumeLayout(false);
             PerformLayout();
@@ -318,5 +330,6 @@
         private TextBox textboxIDTuasach;
         private Button btnTacGiaPhu;
         private Label IDTuaSach;
+        private Button btnXoaTacGia;
     }
 }

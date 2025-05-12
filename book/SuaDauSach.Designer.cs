@@ -43,7 +43,6 @@
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            label4 = new Label();
             label3 = new Label();
             label1 = new Label();
             textboxNhaXuatBan = new TextBox();
@@ -61,8 +60,8 @@
             label11 = new Label();
             listBox3 = new ListBox();
             listBox4 = new ListBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox2 = new TextBox();
+            ThoiGianNhapDauSach = new DateTimePicker();
+            textBoxSoLuongDauSach = new TextBox();
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
@@ -70,12 +69,13 @@
             label16 = new Label();
             label17 = new Label();
             label18 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            textBoxNhaDauSach = new TextBox();
+            textBoxNamDauSach = new TextBox();
+            textBoxTheLoaiDauSach = new TextBox();
+            textBoxTacGiaDauSach = new TextBox();
+            textBoxTenDauSach = new TextBox();
             button4 = new Button();
+            btnXoaTacGia = new Button();
             SuspendLayout();
             // 
             // IDTuaSach
@@ -190,7 +190,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(80, 91);
+            label6.Location = new Point(80, 78);
             label6.Name = "label6";
             label6.Size = new Size(62, 20);
             label6.TabIndex = 61;
@@ -199,20 +199,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(230, 93);
+            label5.Location = new Point(230, 80);
             label5.Name = "label5";
             label5.Size = new Size(102, 20);
             label5.TabIndex = 60;
             label5.Text = "Năm xuất bản";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(80, 144);
-            label4.Name = "label4";
-            label4.Size = new Size(97, 20);
-            label4.TabIndex = 59;
-            label4.Text = "Nhà xuất bản";
             // 
             // label3
             // 
@@ -241,14 +232,14 @@
             // 
             // textboxNamXuatBan
             // 
-            textboxNamXuatBan.Location = new Point(230, 116);
+            textboxNamXuatBan.Location = new Point(230, 103);
             textboxNamXuatBan.Name = "textboxNamXuatBan";
             textboxNamXuatBan.Size = new Size(125, 27);
             textboxNamXuatBan.TabIndex = 55;
             // 
             // textboxTheLoai
             // 
-            textboxTheLoai.Location = new Point(80, 114);
+            textboxTheLoai.Location = new Point(80, 101);
             textboxTheLoai.Name = "textboxTheLoai";
             textboxTheLoai.Size = new Size(125, 27);
             textboxTheLoai.TabIndex = 54;
@@ -353,19 +344,19 @@
             listBox4.Size = new Size(157, 124);
             listBox4.TabIndex = 90;
             // 
-            // dateTimePicker1
+            // ThoiGianNhapDauSach
             // 
-            dateTimePicker1.Location = new Point(80, 237);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 89;
+            ThoiGianNhapDauSach.Location = new Point(80, 237);
+            ThoiGianNhapDauSach.Name = "ThoiGianNhapDauSach";
+            ThoiGianNhapDauSach.Size = new Size(250, 27);
+            ThoiGianNhapDauSach.TabIndex = 89;
             // 
-            // textBox2
+            // textBoxSoLuongDauSach
             // 
-            textBox2.Location = new Point(230, 38);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 88;
+            textBoxSoLuongDauSach.Location = new Point(230, 38);
+            textBoxSoLuongDauSach.Name = "textBoxSoLuongDauSach";
+            textBoxSoLuongDauSach.Size = new Size(125, 27);
+            textBoxSoLuongDauSach.TabIndex = 88;
             // 
             // label12
             // 
@@ -388,7 +379,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(80, 91);
+            label14.Location = new Point(80, 78);
             label14.Name = "label14";
             label14.Size = new Size(62, 20);
             label14.TabIndex = 85;
@@ -397,7 +388,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(230, 93);
+            label15.Location = new Point(230, 80);
             label15.Name = "label15";
             label15.Size = new Size(102, 20);
             label15.TabIndex = 84;
@@ -406,11 +397,12 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(80, 144);
+            label16.Location = new Point(80, 147);
             label16.Name = "label16";
             label16.Size = new Size(97, 20);
             label16.TabIndex = 83;
             label16.Text = "Nhà xuất bản";
+            label16.Click += label16_Click;
             // 
             // label17
             // 
@@ -430,40 +422,40 @@
             label18.TabIndex = 81;
             label18.Text = "Tên sách";
             // 
-            // textBox3
+            // textBoxNhaDauSach
             // 
-            textBox3.Location = new Point(80, 170);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 80;
+            textBoxNhaDauSach.Location = new Point(80, 170);
+            textBoxNhaDauSach.Name = "textBoxNhaDauSach";
+            textBoxNhaDauSach.Size = new Size(125, 27);
+            textBoxNhaDauSach.TabIndex = 80;
             // 
-            // textBox4
+            // textBoxNamDauSach
             // 
-            textBox4.Location = new Point(230, 116);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 79;
+            textBoxNamDauSach.Location = new Point(230, 103);
+            textBoxNamDauSach.Name = "textBoxNamDauSach";
+            textBoxNamDauSach.Size = new Size(125, 27);
+            textBoxNamDauSach.TabIndex = 79;
             // 
-            // textBox5
+            // textBoxTheLoaiDauSach
             // 
-            textBox5.Location = new Point(80, 114);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 78;
+            textBoxTheLoaiDauSach.Location = new Point(80, 101);
+            textBoxTheLoaiDauSach.Name = "textBoxTheLoaiDauSach";
+            textBoxTheLoaiDauSach.Size = new Size(125, 27);
+            textBoxTheLoaiDauSach.TabIndex = 78;
             // 
-            // textBox6
+            // textBoxTacGiaDauSach
             // 
-            textBox6.Location = new Point(456, 38);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 77;
+            textBoxTacGiaDauSach.Location = new Point(456, 38);
+            textBoxTacGiaDauSach.Name = "textBoxTacGiaDauSach";
+            textBoxTacGiaDauSach.Size = new Size(125, 27);
+            textBoxTacGiaDauSach.TabIndex = 77;
             // 
-            // textBox7
+            // textBoxTenDauSach
             // 
-            textBox7.Location = new Point(80, 40);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(125, 27);
-            textBox7.TabIndex = 76;
+            textBoxTenDauSach.Location = new Point(80, 40);
+            textBoxTenDauSach.Name = "textBoxTenDauSach";
+            textBoxTenDauSach.Size = new Size(125, 27);
+            textBoxTenDauSach.TabIndex = 76;
             // 
             // button4
             // 
@@ -474,11 +466,21 @@
             button4.Text = "Lưu";
             button4.UseVisualStyleBackColor = true;
             // 
+            // btnXoaTacGia
+            // 
+            btnXoaTacGia.Location = new Point(628, 289);
+            btnXoaTacGia.Name = "btnXoaTacGia";
+            btnXoaTacGia.Size = new Size(94, 29);
+            btnXoaTacGia.TabIndex = 99;
+            btnXoaTacGia.Text = "Xoá tác giả";
+            btnXoaTacGia.UseVisualStyleBackColor = true;
+            // 
             // SuaDauSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
+            Controls.Add(btnXoaTacGia);
             Controls.Add(label9);
             Controls.Add(txtboxIDDauSach);
             Controls.Add(button1);
@@ -488,8 +490,8 @@
             Controls.Add(label11);
             Controls.Add(listBox3);
             Controls.Add(listBox4);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox2);
+            Controls.Add(ThoiGianNhapDauSach);
+            Controls.Add(textBoxSoLuongDauSach);
             Controls.Add(label12);
             Controls.Add(label13);
             Controls.Add(label14);
@@ -497,11 +499,11 @@
             Controls.Add(label16);
             Controls.Add(label17);
             Controls.Add(label18);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
-            Controls.Add(textBox7);
+            Controls.Add(textBoxNhaDauSach);
+            Controls.Add(textBoxNamDauSach);
+            Controls.Add(textBoxTheLoaiDauSach);
+            Controls.Add(textBoxTacGiaDauSach);
+            Controls.Add(textBoxTenDauSach);
             Controls.Add(button4);
             Controls.Add(IDTuaSach);
             Controls.Add(textboxIDTuasach);
@@ -518,7 +520,6 @@
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(textboxNhaXuatBan);
@@ -550,7 +551,6 @@
         private Label label7;
         private Label label6;
         private Label label5;
-        private Label label4;
         private Label label3;
         private Label label1;
         private TextBox textboxNhaXuatBan;
@@ -568,8 +568,8 @@
         private Label label11;
         private ListBox listBox3;
         private ListBox listBox4;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
+        private DateTimePicker ThoiGianNhapDauSach;
+        private TextBox textBoxSoLuongDauSach;
         private Label label12;
         private Label label13;
         private Label label14;
@@ -577,11 +577,12 @@
         private Label label16;
         private Label label17;
         private Label label18;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private TextBox textBoxNhaDauSach;
+        private TextBox textBoxNamDauSach;
+        private TextBox textBoxTheLoaiDauSach;
+        private TextBox textBoxTacGiaDauSach;
+        private TextBox textBoxTenDauSach;
         private Button button4;
+        private Button btnXoaTacGia;
     }
 }

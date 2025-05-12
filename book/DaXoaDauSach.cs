@@ -13,69 +13,67 @@ namespace book
         {
             InitializeComponent();
             _refreshParent = refreshParent; // Store the refresh callback
-            HienthiDauSachDaXoa();
+            LoadDeletedDauSach();
         }
 
-        private void HienthiDauSachDaXoa()
+        private void LoadDeletedDauSach()
         {
             using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
                 string query = @"
-                    SELECT
-                        ds.id_dau_sach,
-                        ds.ma_dau_sach,
-                        ds.id_tua_sach,
-                        ts.ten_sach,
-                        ts.the_loai,
-                        STRING_AGG(tg.ten_tac_gia, ', ') AS tac_gia,
-                        ts.nam_xuat_ban,
-                        ts.nha_xuat_ban,
-                        ds.trang_thai,
-                        ds.ngay_nhap
-                    FROM Dau_Sach ds
-                    JOIN Tua_Sach ts ON ds.id_tua_sach = ts.id_tua_sach
-                    LEFT JOIN TuaSach_TacGia tgts ON tgts.id_tua_sach = ts.id_tua_sach
-                    LEFT JOIN Tac_Gia tg ON tg.id_tac_gia = tgts.id_tac_gia
-                    WHERE ds.trang_thai = FALSE
-                    GROUP BY ds.id_dau_sach, ds.ma_dau_sach, ds.id_tua_sach, ts.ten_sach, ts.the_loai,
-                             ts.nam_xuat_ban, ts.nha_xuat_ban, ds.trang_thai, ds.ngay_nhap";
+SELECT
+    ds.id_dau_sach,
+    ds.ma_dau_sach,
+    ts.ten_sach,
+    ts.the_loai,
+    STRING_AGG(tg.ten_tac_gia, ', ') AS tac_gia,
+    ts.nam_xuat_ban,
+    ts.nha_xuat_ban,
+    ds.ngay_nhap,
+    ds.trang_thai
+FROM Dau_Sach ds
+JOIN Tua_Sach ts ON ds.id_tua_sach = ts.id_tua_sach
+LEFT JOIN TuaSach_TacGia tgts ON tgts.id_tua_sach = ts.id_tua_sach
+LEFT JOIN Tac_Gia tg ON tg.id_tac_gia = tgts.id_tac_gia
+WHERE ds.trang_thai = FALSE
+GROUP BY ds.id_dau_sach, ds.ma_dau_sach, ts.ten_sach, ts.the_loai,
+         ts.nam_xuat_ban, ts.nha_xuat_ban, ds.ngay_nhap, ds.trang_thai";
 
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, conn))
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-                    Danhsachdaxoa.DataSource = dt; // Hiển thị dữ liệu lên DataGridView
+                    datagridviewDauSachDaXoa.DataSource = dt; // Hiển thị dữ liệu lên DataGridView
 
                     // Đặt tiêu đề cột
-                    Danhsachdaxoa.Columns["id_dau_sach"].HeaderText = "ID Đầu Sách";
-                    Danhsachdaxoa.Columns["ma_dau_sach"].HeaderText = "Mã Đầu Sách";
-                    Danhsachdaxoa.Columns["id_tua_sach"].HeaderText = "ID Tựa Sách";
-                    Danhsachdaxoa.Columns["ten_sach"].HeaderText = "Tên Sách";
-                    Danhsachdaxoa.Columns["the_loai"].HeaderText = "Thể Loại";
-                    Danhsachdaxoa.Columns["tac_gia"].HeaderText = "Tác Giả";
-                    Danhsachdaxoa.Columns["nam_xuat_ban"].HeaderText = "Năm Xuất Bản";
-                    Danhsachdaxoa.Columns["nha_xuat_ban"].HeaderText = "Nhà Xuất Bản";
-                    Danhsachdaxoa.Columns["trang_thai"].HeaderText = "Trạng Thái";
-                    Danhsachdaxoa.Columns["ngay_nhap"].HeaderText = "Ngày Nhập";
+                    datagridviewDauSachDaXoa.Columns["id_dau_sach"].HeaderText = "ID Đầu Sách";
+                    datagridviewDauSachDaXoa.Columns["ma_dau_sach"].HeaderText = "Mã Đầu Sách";
+                    datagridviewDauSachDaXoa.Columns["ten_sach"].HeaderText = "Tên Sách";
+                    datagridviewDauSachDaXoa.Columns["the_loai"].HeaderText = "Thể Loại";
+                    datagridviewDauSachDaXoa.Columns["tac_gia"].HeaderText = "Tác Giả";
+                    datagridviewDauSachDaXoa.Columns["nam_xuat_ban"].HeaderText = "Năm Xuất Bản";
+                    datagridviewDauSachDaXoa.Columns["nha_xuat_ban"].HeaderText = "Nhà Xuất Bản";
+                    datagridviewDauSachDaXoa.Columns["ngay_nhap"].HeaderText = "Ngày Nhập";
+                    datagridviewDauSachDaXoa.Columns["trang_thai"].HeaderText = "Trạng Thái";
                 }
             }
         }
 
-        private void btnKhoiphuc_Click(object sender, EventArgs e)
+        private void btnRestore_Click(object sender, EventArgs e)
         {
-            if (Danhsachdaxoa.SelectedRows.Count > 0)
+            if (datagridviewDauSachDaXoa.SelectedRows.Count > 0)
             {
-                int idDauSach = Convert.ToInt32(Danhsachdaxoa.SelectedRows[0].Cells["id_dau_sach"].Value);
+                int idTuaSach = Convert.ToInt32(datagridviewDauSachDaXoa.SelectedRows[0].Cells["id_dau_sach"].Value);
 
                 using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
                 {
                     conn.Open();
-                    string query = "UPDATE Dau_Sach SET trang_thai = TRUE WHERE id_dau_sach = @idDauSach";
+                    string query = "UPDATE dau_sach SET trang_thai = TRUE WHERE id_dau_sach = @idDauSach";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@idDauSach", idDauSach);
+                        cmd.Parameters.AddWithValue("@idDauSach", idTuaSach);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -83,16 +81,16 @@ namespace book
                 // Hiển thị thông báo khôi phục thành công
                 MessageBox.Show("Khôi phục thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Làm mới DataGridView trong DaXoaDauSach form
-                HienthiDauSachDaXoa();
+                // Làm mới DataGridView trong Deleted form
+                LoadDeletedDauSach();
 
-                // Làm mới DataGridView trong DauSach form
+                // Làm mới DataGridView trong begin form
                 _refreshParent?.Invoke();
             }
             else
             {
                 // Thông báo nếu không có dòng nào được chọn
-                MessageBox.Show("Vui lòng chọn một đầu sách để khôi phục!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một sách để khôi phục!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

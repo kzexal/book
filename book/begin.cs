@@ -92,16 +92,26 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                 using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
                 {
                     conn.Open();
-                    string query = "UPDATE tua_sach SET trang_thai = FALSE WHERE id_tua_sach = @idTuaSach";
 
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    // 1. Set trang_thai = FALSE cho Tua_Sach
+                    string queryUpdateTuaSach = "UPDATE tua_sach SET trang_thai = FALSE WHERE id_tua_sach = @idTuaSach";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(queryUpdateTuaSach, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // 2. Set trang_thai = FALSE cho tất cả Dau_Sach có id_tua_sach tương ứng
+                    string queryUpdateDauSach = "UPDATE dau_sach SET trang_thai = FALSE WHERE id_tua_sach = @idTuaSach";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(queryUpdateDauSach, conn))
                     {
                         cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
                         cmd.ExecuteNonQuery();
                     }
                 }
             }
-            LoadBookList();
+
+            LoadBookList(); // Refresh danh sách
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)

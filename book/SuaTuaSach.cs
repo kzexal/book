@@ -219,10 +219,49 @@ namespace book
 
         private void btnThemTacGia_Click(object sender, EventArgs e)
         {
+            string tenTacGia = textboxTacGia.Text.Trim();  // Lấy tên tác giả từ textbox và loại bỏ khoảng trắng thừa
+
+            if (!string.IsNullOrEmpty(tenTacGia))
+            {
+                // Kiểm tra xem tác giả đã có trong listBox1 chưa
+                if (!listBox1.Items.Contains(tenTacGia))
+                {
+                    listBox1.Items.Add(tenTacGia);  // Thêm tác giả vào listBox1 (co-authors)
+                    textboxTacGia.Clear();  // Làm sạch textbox sau khi thêm tác giả
+                }
+                else
+                {
+                    MessageBox.Show("Tác giả đã có trong danh sách.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập tên tác giả.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnXoaTacGia_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem người dùng có chọn tác giả trong listBox1 hoặc listBox2 không
+            if (listBox1.SelectedItem != null)
+            {
+                // Nếu có chọn tác giả trong listBox1 (co-authors), xoá tác giả đó
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
+            else if (listBox2.SelectedItem != null)
+            {
+                // Nếu có chọn tác giả trong listBox2 (main authors), xoá tác giả đó
+                listBox2.Items.Remove(listBox2.SelectedItem);
+            }
+            else
+            {
+                // Nếu không có tác giả nào được chọn, thông báo cho người dùng
+                MessageBox.Show("Vui lòng chọn tác giả cần xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

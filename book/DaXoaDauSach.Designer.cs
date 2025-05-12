@@ -28,45 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnKhoiphuc = new Button();
-            Danhsachdaxoa = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)Danhsachdaxoa).BeginInit();
+            btnRestore = new Button();
+            datagridviewDauSachDaXoa = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)datagridviewDauSachDaXoa).BeginInit();
             SuspendLayout();
             // 
-            // btnKhoiphuc
+            // btnRestore
             // 
-            btnKhoiphuc.Location = new Point(384, 342);
-            btnKhoiphuc.Name = "btnKhoiphuc";
-            btnKhoiphuc.Size = new Size(94, 29);
-            btnKhoiphuc.TabIndex = 3;
-            btnKhoiphuc.Text = "Khôi phục";
-            btnKhoiphuc.UseVisualStyleBackColor = true;
+            btnRestore.Location = new Point(384, 342);
+            btnRestore.Name = "btnRestore";
+            btnRestore.Size = new Size(94, 29);
+            btnRestore.TabIndex = 3;
+            btnRestore.Text = "Khôi phục";
+            btnRestore.UseVisualStyleBackColor = true;
+            btnRestore.Click += btnRestore_Click;
             // 
-            // Danhsachdaxoa
+            // datagridviewDauSachDaXoa
             // 
-            Danhsachdaxoa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Danhsachdaxoa.Location = new Point(12, 42);
-            Danhsachdaxoa.Name = "Danhsachdaxoa";
-            Danhsachdaxoa.RowHeadersWidth = 51;
-            Danhsachdaxoa.Size = new Size(938, 218);
-            Danhsachdaxoa.TabIndex = 2;
+            datagridviewDauSachDaXoa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagridviewDauSachDaXoa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datagridviewDauSachDaXoa.Location = new Point(12, 42);
+            datagridviewDauSachDaXoa.Name = "datagridviewDauSachDaXoa";
+            datagridviewDauSachDaXoa.RowHeadersWidth = 51;
+            datagridviewDauSachDaXoa.Size = new Size(938, 218);
+            datagridviewDauSachDaXoa.TabIndex = 2;
             // 
             // DaXoaDauSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
-            Controls.Add(btnKhoiphuc);
-            Controls.Add(Danhsachdaxoa);
+            Controls.Add(btnRestore);
+            Controls.Add(datagridviewDauSachDaXoa);
             Name = "DaXoaDauSach";
             Text = "DaXoaDauSach";
-            ((System.ComponentModel.ISupportInitialize)Danhsachdaxoa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)datagridviewDauSachDaXoa).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnKhoiphuc;
-        private DataGridView Danhsachdaxoa;
+        private Button btnRestore;
+        private DataGridView datagridviewDauSachDaXoa;
     }
 }

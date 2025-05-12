@@ -25,23 +25,24 @@ namespace book
             {
                 conn.Open();
                 string query = @"
-            SELECT
-                ds.id_dau_sach,
-                ds.ma_dau_sach,
-                ds.id_tua_sach,
-                ts.ten_sach,
-                ts.the_loai,
-                STRING_AGG(tg.ten_tac_gia, ', ') AS tac_gia,
-                ts.nam_xuat_ban,
-                ts.nha_xuat_ban,
-                ds.trang_thai,
-                ds.ngay_nhap
-            FROM Dau_Sach ds
-            JOIN Tua_Sach ts ON ds.id_tua_sach = ts.id_tua_sach
-            LEFT JOIN TuaSach_TacGia tgts ON tgts.id_tua_sach = ts.id_tua_sach
-            LEFT JOIN Tac_Gia tg ON tg.id_tac_gia = tgts.id_tac_gia
-            GROUP BY ds.id_dau_sach, ds.ma_dau_sach, ds.id_tua_sach, ts.ten_sach, ts.the_loai,
-                     ts.nam_xuat_ban, ts.nha_xuat_ban, ds.trang_thai, ds.ngay_nhap";
+                SELECT
+                    ds.id_dau_sach,
+                    ds.ma_dau_sach,
+                    ds.id_tua_sach,
+                    ts.ten_sach,
+                    ts.the_loai,
+                    STRING_AGG(tg.ten_tac_gia, ', ') AS tac_gia,
+                    ts.nam_xuat_ban,
+                    ts.nha_xuat_ban,
+                    ds.trang_thai,
+                    ds.ngay_nhap
+                FROM Dau_Sach ds
+                JOIN Tua_Sach ts ON ds.id_tua_sach = ts.id_tua_sach
+                LEFT JOIN TuaSach_TacGia tgts ON tgts.id_tua_sach = ts.id_tua_sach
+                LEFT JOIN Tac_Gia tg ON tg.id_tac_gia = tgts.id_tac_gia
+                WHERE ds.trang_thai = TRUE
+                GROUP BY ds.id_dau_sach, ds.ma_dau_sach, ds.id_tua_sach, ts.ten_sach, ts.the_loai,
+                         ts.nam_xuat_ban, ts.nha_xuat_ban, ds.trang_thai, ds.ngay_nhap";
 
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, conn))
                 {
@@ -66,9 +67,66 @@ namespace book
 
         private void btnThemDauSach_Click(object sender, EventArgs e)
         {
-            ThemDauSach formAdd = new ThemDauSach();
-            formAdd.ShowDialog(); // Use ShowDialog to wait for form closure
-            LoadDauSachList(); // Refresh after adding
+            if (dataGridViewDauSach.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn một đầu sách để sao chép.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataGridViewRow selectedRow = dataGridViewDauSach.SelectedRows[0];
+            int idTuaSach = Convert.ToInt32(selectedRow.Cells["id_tua_sach"].Value);
+
+            string newMaDauSach;
+            using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                conn.Open();
+
+                // Lấy mã đầu sách lớn nhất theo số, không theo chữ
+                string maxMaQuery = @"
+            SELECT ma_dau_sach
+            FROM Dau_Sach
+            WHERE id_tua_sach = @idTuaSach
+            ORDER BY
+                LENGTH(REGEXP_REPLACE(ma_dau_sach, '\D', '', 'g'))::INT DESC,
+                ma_dau_sach DESC
+            LIMIT 1";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(maxMaQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
+                    object result = cmd.ExecuteScalar();
+                    string maxMa = result?.ToString() ?? "TS000";
+                    newMaDauSach = TangMaDauSach(maxMa);
+                }
+
+                // Thêm bản ghi mới
+                string insertQuery = @"
+            INSERT INTO Dau_Sach (ma_dau_sach, id_tua_sach, trang_thai, ngay_nhap)
+            VALUES (@maDauSach, @idTuaSach, TRUE, CURRENT_DATE)";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maDauSach", newMaDauSach);
+                    cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            LoadDauSachList(); // Refresh lại danh sách
+        }
+
+        private string TangMaDauSach(string maCu)
+        {
+            string prefix = new string(maCu.TakeWhile(c => !char.IsDigit(c)).ToArray());
+            string so = new string(maCu.SkipWhile(c => !char.IsDigit(c)).ToArray());
+
+            if (int.TryParse(so, out int number))
+            {
+                number++;
+                return $"{prefix}{number}";
+            }
+
+            return $"{prefix}001";
         }
 
         private void btnSuaDauSach_Click(object sender, EventArgs e)
@@ -77,10 +135,8 @@ namespace book
             if (dataGridViewDauSach.SelectedRows.Count > 0)
             {
                 int idDauSach = Convert.ToInt32(dataGridViewDauSach.SelectedRows[0].Cells["id_dau_sach"].Value);
-
-                // Pass LoadDauSachList as the refresh callback
                 SuaDauSach formSua = new SuaDauSach(idDauSach, LoadDauSachList);
-                formSua.ShowDialog(); // Use ShowDialog to wait for form closure
+                formSua.ShowDialog();
             }
         }
 
@@ -102,12 +158,12 @@ namespace book
                     }
                 }
             }
-            LoadDauSachList(); // Refresh after deletion
+
+            LoadDauSachList();
         }
 
         private void btnDanhSachDaXoaDauSach_Click(object sender, EventArgs e)
         {
-            // Pass LoadDauSachList as the refresh callback
             DaXoaDauSach formDeleted = new DaXoaDauSach(LoadDauSachList);
             formDeleted.Show();
         }
