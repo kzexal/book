@@ -76,57 +76,62 @@ namespace book
             DataGridViewRow selectedRow = dataGridViewDauSach.SelectedRows[0];
             int idTuaSach = Convert.ToInt32(selectedRow.Cells["id_tua_sach"].Value);
 
-            string newMaDauSach;
             using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
-
-                // Lấy mã đầu sách lớn nhất theo số, không theo chữ
-                string maxMaQuery = @"
-            SELECT ma_dau_sach
-            FROM Dau_Sach
-            WHERE id_tua_sach = @idTuaSach
-            ORDER BY
-                LENGTH(REGEXP_REPLACE(ma_dau_sach, '\D', '', 'g'))::INT DESC,
-                ma_dau_sach DESC
-            LIMIT 1";
-
-                using (NpgsqlCommand cmd = new NpgsqlCommand(maxMaQuery, conn))
+                using (var transaction = conn.BeginTransaction())
                 {
-                    cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
-                    object result = cmd.ExecuteScalar();
-                    string maxMa = result?.ToString() ?? "TS000";
-                    newMaDauSach = TangMaDauSach(maxMa);
-                }
+                    string newMaDauSach = GenerateUniqueMaDauSach(idTuaSach, conn);
 
-                // Thêm bản ghi mới
-                string insertQuery = @"
-            INSERT INTO Dau_Sach (ma_dau_sach, id_tua_sach, trang_thai, ngay_nhap)
-            VALUES (@maDauSach, @idTuaSach, TRUE, CURRENT_DATE)";
+                    // 1. Thêm vào bảng Dau_Sach
+                    string insertQuery = @"
+                INSERT INTO Dau_Sach (ma_dau_sach, id_tua_sach, trang_thai, ngay_nhap)
+                VALUES (@maDauSach, @idTuaSach, TRUE, CURRENT_DATE)";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@maDauSach", newMaDauSach);
+                        cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
+                        cmd.ExecuteNonQuery();
+                    }
 
-                using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, conn))
-                {
-                    cmd.Parameters.AddWithValue("@maDauSach", newMaDauSach);
-                    cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
-                    cmd.ExecuteNonQuery();
+                    // 2. Cập nhật số lượng sách trong bảng Tua_Sach
+                    string updateSoLuongQuery = @"
+                UPDATE Tua_Sach
+                SET so_luong = so_luong + 1
+                WHERE id_tua_sach = @idTuaSach";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateSoLuongQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
                 }
             }
+            MessageBox.Show("Thêm đầu sách thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             LoadDauSachList(); // Refresh lại danh sách
         }
 
-        private string TangMaDauSach(string maCu)
+        private string GenerateUniqueMaDauSach(int idTuaSach, NpgsqlConnection conn)
         {
-            string prefix = new string(maCu.TakeWhile(c => !char.IsDigit(c)).ToArray());
-            string so = new string(maCu.SkipWhile(c => !char.IsDigit(c)).ToArray());
-
-            if (int.TryParse(so, out int number))
+            int stt = 1;
+            string ma;
+            while (true)
             {
-                number++;
-                return $"{prefix}{number}";
-            }
+                ma = $"TS{idTuaSach}_{stt}";
 
-            return $"{prefix}001";
+                string queryCheck = "SELECT COUNT(*) FROM dau_sach WHERE ma_dau_sach = @ma";
+                using (var cmd = new NpgsqlCommand(queryCheck, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ma", ma);
+                    long count = (long)cmd.ExecuteScalar();
+                    if (count == 0) break; // Không trùng => dùng được
+                }
+
+                stt++; // Nếu trùng thì thử tiếp
+            }
+            return ma;
         }
 
         private void btnSuaDauSach_Click(object sender, EventArgs e)

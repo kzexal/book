@@ -114,7 +114,7 @@ namespace book
                 for (int i = 0; i < so_luong; i++)
                 {
                     // Tạo mã đầu sách theo định dạng TS{id_tua_sach}{id_dau_sach}
-                    string ma_dau_sach = $"TS{id_tua_sach}{i + 1}"; // Tạo mã đầu sách với id_tua_sach và số thứ tự đầu sách
+                    string ma_dau_sach = $"TS{id_tua_sach}_{i + 1}"; // Tạo mã đầu sách với id_tua_sach và số thứ tự đầu sách
 
                     // Thêm bản sao (đầu sách) vào bảng "Dau_Sach"
                     string queryDauSach = "INSERT INTO Dau_Sach (id_tua_sach, ma_dau_sach, trang_thai, ngay_nhap) " +

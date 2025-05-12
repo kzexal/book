@@ -52,10 +52,10 @@
             textboxTenSach = new TextBox();
             btnLuu = new Button();
             label9 = new Label();
-            txtboxIDDauSach = new TextBox();
-            button1 = new Button();
+            textBoxIDDauSach = new TextBox();
+            btnThemTacGiaDS = new Button();
             button2 = new Button();
-            button3 = new Button();
+            btnChonTacGiaChinh = new Button();
             label10 = new Label();
             label11 = new Label();
             listBox3 = new ListBox();
@@ -74,8 +74,8 @@
             textBoxTheLoaiDauSach = new TextBox();
             textBoxTacGiaDauSach = new TextBox();
             textBoxTenDauSach = new TextBox();
-            button4 = new Button();
-            btnXoaTacGia = new Button();
+            btnLuuDauSach = new Button();
+            btnXoaTacGiaDS = new Button();
             SuspendLayout();
             // 
             // IDTuaSach
@@ -276,21 +276,22 @@
             label9.TabIndex = 98;
             label9.Text = "IDDauSach";
             // 
-            // txtboxIDDauSach
+            // textBoxIDDauSach
             // 
-            txtboxIDDauSach.Location = new Point(80, 301);
-            txtboxIDDauSach.Name = "txtboxIDDauSach";
-            txtboxIDDauSach.Size = new Size(125, 27);
-            txtboxIDDauSach.TabIndex = 97;
+            textBoxIDDauSach.Location = new Point(80, 301);
+            textBoxIDDauSach.Name = "textBoxIDDauSach";
+            textBoxIDDauSach.Size = new Size(125, 27);
+            textBoxIDDauSach.TabIndex = 97;
             // 
-            // button1
+            // btnThemTacGiaDS
             // 
-            button1.Location = new Point(617, 38);
-            button1.Name = "button1";
-            button1.Size = new Size(119, 37);
-            button1.TabIndex = 96;
-            button1.Text = "Thêm tác giả";
-            button1.UseVisualStyleBackColor = true;
+            btnThemTacGiaDS.Location = new Point(617, 38);
+            btnThemTacGiaDS.Name = "btnThemTacGiaDS";
+            btnThemTacGiaDS.Size = new Size(119, 37);
+            btnThemTacGiaDS.TabIndex = 96;
+            btnThemTacGiaDS.Text = "Thêm tác giả";
+            btnThemTacGiaDS.UseVisualStyleBackColor = true;
+            btnThemTacGiaDS.Click += btnThemTacGiaDS_Click;
             // 
             // button2
             // 
@@ -300,15 +301,17 @@
             button2.TabIndex = 95;
             button2.Text = "<";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += btnChonTacGiaPhu_Click;
             // 
-            // button3
+            // btnChonTacGiaChinh
             // 
-            button3.Location = new Point(628, 126);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 37);
-            button3.TabIndex = 94;
-            button3.Text = ">";
-            button3.UseVisualStyleBackColor = true;
+            btnChonTacGiaChinh.Location = new Point(628, 126);
+            btnChonTacGiaChinh.Name = "btnChonTacGiaChinh";
+            btnChonTacGiaChinh.Size = new Size(94, 37);
+            btnChonTacGiaChinh.TabIndex = 94;
+            btnChonTacGiaChinh.Text = ">";
+            btnChonTacGiaChinh.UseVisualStyleBackColor = true;
+            btnChonTacGiaChinh.Click += btnChonTacGiaChinh_Click;
             // 
             // label10
             // 
@@ -457,35 +460,37 @@
             textBoxTenDauSach.Size = new Size(125, 27);
             textBoxTenDauSach.TabIndex = 76;
             // 
-            // button4
+            // btnLuuDauSach
             // 
-            button4.Location = new Point(431, 341);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 75;
-            button4.Text = "Lưu";
-            button4.UseVisualStyleBackColor = true;
+            btnLuuDauSach.Location = new Point(431, 341);
+            btnLuuDauSach.Name = "btnLuuDauSach";
+            btnLuuDauSach.Size = new Size(94, 29);
+            btnLuuDauSach.TabIndex = 75;
+            btnLuuDauSach.Text = "Lưu";
+            btnLuuDauSach.UseVisualStyleBackColor = true;
+            btnLuuDauSach.Click += btnLuuDauSach_Click;
             // 
-            // btnXoaTacGia
+            // btnXoaTacGiaDS
             // 
-            btnXoaTacGia.Location = new Point(628, 289);
-            btnXoaTacGia.Name = "btnXoaTacGia";
-            btnXoaTacGia.Size = new Size(94, 29);
-            btnXoaTacGia.TabIndex = 99;
-            btnXoaTacGia.Text = "Xoá tác giả";
-            btnXoaTacGia.UseVisualStyleBackColor = true;
+            btnXoaTacGiaDS.Location = new Point(628, 289);
+            btnXoaTacGiaDS.Name = "btnXoaTacGiaDS";
+            btnXoaTacGiaDS.Size = new Size(94, 29);
+            btnXoaTacGiaDS.TabIndex = 99;
+            btnXoaTacGiaDS.Text = "Xoá tác giả";
+            btnXoaTacGiaDS.UseVisualStyleBackColor = true;
+            btnXoaTacGiaDS.Click += btnXoaTacGiaDS_Click;
             // 
             // SuaDauSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
-            Controls.Add(btnXoaTacGia);
+            Controls.Add(btnXoaTacGiaDS);
             Controls.Add(label9);
-            Controls.Add(txtboxIDDauSach);
-            Controls.Add(button1);
+            Controls.Add(textBoxIDDauSach);
+            Controls.Add(btnThemTacGiaDS);
             Controls.Add(button2);
-            Controls.Add(button3);
+            Controls.Add(btnChonTacGiaChinh);
             Controls.Add(label10);
             Controls.Add(label11);
             Controls.Add(listBox3);
@@ -504,7 +509,7 @@
             Controls.Add(textBoxTheLoaiDauSach);
             Controls.Add(textBoxTacGiaDauSach);
             Controls.Add(textBoxTenDauSach);
-            Controls.Add(button4);
+            Controls.Add(btnLuuDauSach);
             Controls.Add(IDTuaSach);
             Controls.Add(textboxIDTuasach);
             Controls.Add(btnThemTacGia);
@@ -560,10 +565,10 @@
         private TextBox textboxTenSach;
         private Button btnLuu;
         private Label label9;
-        private TextBox txtboxIDDauSach;
-        private Button button1;
+        private TextBox textBoxIDDauSach;
+        private Button btnThemTacGiaDS;
         private Button button2;
-        private Button button3;
+        private Button btnChonTacGiaChinh;
         private Label label10;
         private Label label11;
         private ListBox listBox3;
@@ -582,7 +587,7 @@
         private TextBox textBoxTheLoaiDauSach;
         private TextBox textBoxTacGiaDauSach;
         private TextBox textBoxTenDauSach;
-        private Button button4;
-        private Button btnXoaTacGia;
+        private Button btnLuuDauSach;
+        private Button btnXoaTacGiaDS;
     }
 }
