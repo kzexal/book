@@ -73,7 +73,10 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                 using (NpgsqlConnection conn = DatabaseConnection.GetConnection())
                 {
                     conn.Open();
-                    string query = "UPDATE tua_sach SET trang_thai = TRUE WHERE id_tua_sach = @idTuaSach";
+                    string query = @"
+    UPDATE tua_sach SET trang_thai = TRUE WHERE id_tua_sach = @idTuaSach;
+    UPDATE dau_sach SET trang_thai = TRUE WHERE id_tua_sach = @idTuaSach;
+";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
