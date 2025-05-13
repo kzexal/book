@@ -50,6 +50,7 @@
             button1 = new Button();
             button2 = new Button();
             btnThemTacGia = new Button();
+            btnXoaTacGia = new Button();
             SuspendLayout();
             // 
             // btnadd
@@ -246,11 +247,22 @@
             btnThemTacGia.UseVisualStyleBackColor = true;
             btnThemTacGia.Click += btnThemTacGia_Click;
             // 
-            // Them
+            // btnXoaTacGia
+            // 
+            btnXoaTacGia.Location = new Point(610, 308);
+            btnXoaTacGia.Name = "btnXoaTacGia";
+            btnXoaTacGia.Size = new Size(94, 29);
+            btnXoaTacGia.TabIndex = 100;
+            btnXoaTacGia.Text = "Xoá tác giả";
+            btnXoaTacGia.UseVisualStyleBackColor = true;
+            btnXoaTacGia.Click += btnXoaTacGia_Click;
+            // 
+            // ThemTuaSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
+            Controls.Add(btnXoaTacGia);
             Controls.Add(btnThemTacGia);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -273,7 +285,7 @@
             Controls.Add(textboxTacGia);
             Controls.Add(textboxTenSach);
             Controls.Add(btnadd);
-            Name = "Them";
+            Name = "ThemTuaSach";
             Text = "Thêm";
             ResumeLayout(false);
             PerformLayout();
@@ -303,5 +315,6 @@
         private Button button1;
         private Button button2;
         private Button btnThemTacGia;
+        private Button btnXoaTacGia;
     }
 }

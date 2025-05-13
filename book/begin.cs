@@ -60,14 +60,16 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                     dataGridViewBooks.Columns["so_luong"].HeaderText = "Số lượng";
                     dataGridViewBooks.Columns["trang_thai"].HeaderText = "Trạng thái";
                     dataGridViewBooks.Columns["thoi_gian"].HeaderText = "Thời Gian Nhập";
+                    // Tự động điều chỉnh độ rộng cột theo nội dung
+                    dataGridViewBooks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 }
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ThemTuaSach formAdd = new ThemTuaSach();
-            formAdd.Show();
+            ThemTuaSach formAdd = new ThemTuaSach(LoadBookList); // Truyền callback để load lại
+            formAdd.Show(); // Dùng ShowDialog để chờ form đóng rồi mới tiếp tục
         }
 
         private void btnSua_Click(object sender, EventArgs e)

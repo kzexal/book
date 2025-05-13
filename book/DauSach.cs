@@ -61,6 +61,7 @@ namespace book
                     dataGridViewDauSach.Columns["nha_xuat_ban"].HeaderText = "Nhà Xuất Bản";
                     dataGridViewDauSach.Columns["trang_thai"].HeaderText = "Trạng Thái";
                     dataGridViewDauSach.Columns["ngay_nhap"].HeaderText = "Ngày Nhập";
+                    dataGridViewDauSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 }
             }
         }

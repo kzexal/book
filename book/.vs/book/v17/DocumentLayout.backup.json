@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\themtuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:themtuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\themtuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:themtuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\daxoatuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:daxoatuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,36 +43,8 @@
       "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:suatuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:suadausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\themtuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:themtuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\suatuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:suatuasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|c:\\users\\buidu\\onedrive\\m\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:dausach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52079D85-2A05-428E-B934-A537ECE75B2E}|book.csproj|solutionrelative:begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "SuaTuaSach.cs",
               "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaTuaSach.cs",
               "RelativeDocumentMoniker": "SuaTuaSach.cs",
@@ -67,19 +71,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DaXoaTuaSach.cs",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DaXoaTuaSach.cs",
-              "RelativeDocumentMoniker": "DaXoaTuaSach.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DaXoaTuaSach.cs*",
-              "RelativeToolTip": "DaXoaTuaSach.cs*",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAIwE4AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:36:16.703Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
@@ -89,43 +80,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SuaDauSach.cs",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaDauSach.cs",
-              "RelativeDocumentMoniker": "SuaDauSach.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaDauSach.cs",
-              "RelativeToolTip": "SuaDauSach.cs",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAIwIUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T09:25:41.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "SuaDauSach.cs [Design]",
               "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaDauSach.cs",
               "RelativeDocumentMoniker": "SuaDauSach.cs",
               "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaDauSach.cs [Design]",
               "RelativeToolTip": "SuaDauSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T15:59:03.226Z"
+              "WhenOpened": "2025-05-12T15:59:03.226Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ThemTuaSach.cs",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\ThemTuaSach.cs",
-              "RelativeDocumentMoniker": "ThemTuaSach.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\ThemTuaSach.cs",
-              "RelativeToolTip": "ThemTuaSach.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAwFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T13:42:33.486Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "SuaTuaSach.cs [Design]",
               "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaTuaSach.cs",
               "RelativeDocumentMoniker": "SuaTuaSach.cs",
@@ -136,51 +103,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "begin.cs",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
-              "RelativeDocumentMoniker": "begin.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
-              "RelativeToolTip": "begin.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAuwG8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T04:03:17.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DauSach.cs",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs",
-              "RelativeDocumentMoniker": "DauSach.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs",
-              "RelativeToolTip": "DauSach.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAIwHkAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:34:28.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "begin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
               "RelativeDocumentMoniker": "begin.cs",
               "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs [Design]",
               "RelativeToolTip": "begin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:38:53.13Z"
+              "WhenOpened": "2025-05-10T18:38:53.13Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "begin.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
+              "RelativeDocumentMoniker": "begin.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\begin.cs",
+              "RelativeToolTip": "begin.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAwD8AAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T04:03:17.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ThemTuaSach.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\ThemTuaSach.cs",
+              "RelativeDocumentMoniker": "ThemTuaSach.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\ThemTuaSach.cs",
+              "RelativeToolTip": "ThemTuaSach.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAwwIoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:42:33.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DauSach.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs",
+              "RelativeDocumentMoniker": "DauSach.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs [Design]*",
+              "RelativeToolTip": "DauSach.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:46:47.681Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DauSach.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs",
+              "RelativeDocumentMoniker": "DauSach.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs*",
+              "RelativeToolTip": "DauSach.cs*",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwD8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:34:28.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SuaDauSach.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaDauSach.cs",
+              "RelativeDocumentMoniker": "SuaDauSach.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\SuaDauSach.cs",
+              "RelativeToolTip": "SuaDauSach.cs",
+              "ViewState": "AgIAANAAAAAAAAAAAAAkwNsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T09:25:41.931Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "DauSach.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs",
-              "RelativeDocumentMoniker": "DauSach.cs",
-              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DauSach.cs [Design]",
-              "RelativeToolTip": "DauSach.cs [Design]",
+              "Title": "DaXoaTuaSach.cs",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DaXoaTuaSach.cs",
+              "RelativeDocumentMoniker": "DaXoaTuaSach.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\DaXoaTuaSach.cs",
+              "RelativeToolTip": "DaXoaTuaSach.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwE4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T19:46:47.681Z"
+              "WhenOpened": "2025-05-13T05:36:16.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThemTuaSach.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\ThemTuaSach.cs",
+              "RelativeDocumentMoniker": "ThemTuaSach.cs",
+              "ToolTip": "C:\\Users\\buidu\\OneDrive\\M\u00E1y t\u00EDnh\\code\\book\\book\\ThemTuaSach.cs [Design]",
+              "RelativeToolTip": "ThemTuaSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T16:04:39.397Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

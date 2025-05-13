@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using System.Windows.Forms;
+using Npgsql;
 
 namespace book
 {
@@ -127,9 +128,14 @@ namespace book
                         cmdDauSach.ExecuteNonQuery();
                     }
                 }
-
                 transaction.Commit();
-                MessageBox.Show($"Thêm sách '{ten_sach}' thành công!");
+                MessageBox.Show($"Thêm sách '{ten_sach}' thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Gọi form cha cập nhật lại danh sách
+                _refreshParent?.Invoke();
+
+                // Đóng form sau khi thêm xong
+                this.Close();
             }
         }
 
@@ -176,6 +182,24 @@ namespace book
                 listBox1.Items.Add(selectedAuthor);
                 listBox2.Items.Remove(selectedAuthor);
             }
+        }
+
+        private void btnXoaTacGia_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            else if (listBox2.SelectedItem != null)
+                listBox2.Items.Remove(listBox2.SelectedItem);
+            else
+                MessageBox.Show("Vui lòng chọn tác giả cần xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private readonly Action _refreshParent;
+
+        public ThemTuaSach(Action refreshParent = null)
+        {
+            InitializeComponent();
+            _refreshParent = refreshParent;
         }
     }
 }
