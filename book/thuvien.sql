@@ -6,7 +6,8 @@ nam_xuat_ban int,
 so_luong INT NOT NULL DEFAULT 0,
 nha_xuat_ban varchar(100),
 Thoi_gian DATE NOT NULL,
-trang_thai BOOLEAN 
+trang_thai BOOLEAN,
+ngay_xoa DATE
 );
 
 CREATE TABLE Tac_Gia (
@@ -25,7 +26,8 @@ CREATE TABLE Dau_Sach (
     id_tua_sach BIGINT NOT NULL REFERENCES Tua_Sach(id_tua_sach) ON DELETE CASCADE,
     ma_dau_sach VARCHAR(50) UNIQUE NOT NULL, 
     trang_thai BOOLEAN,  
-    ngay_nhap DATE NOT NULL DEFAULT CURRENT_DATE
+    ngay_nhap DATE NOT NULL DEFAULT CURRENT_DATE,
+	ngay_xoa DATE
 );
 
 select * from Tua_Sach;

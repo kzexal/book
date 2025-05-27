@@ -52,15 +52,15 @@
             btnKhoiphuc.UseVisualStyleBackColor = true;
             btnKhoiphuc.Click += btnKhoiphuc_Click;
             // 
-            // Deleted
+            // DaXoaTuaSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(971, 383);
             Controls.Add(btnKhoiphuc);
             Controls.Add(Danhsachdaxoa);
-            Name = "Deleted";
-            Text = "Xoa";
+            Name = "DaXoaTuaSach";
+            Text = "Danh sách xoá tựa sách";
             ((System.ComponentModel.ISupportInitialize)Danhsachdaxoa).EndInit();
             ResumeLayout(false);
         }

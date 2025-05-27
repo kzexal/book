@@ -60,7 +60,7 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                     dataGridViewBooks.Columns["so_luong"].HeaderText = "Số lượng";
                     dataGridViewBooks.Columns["trang_thai"].HeaderText = "Trạng thái";
                     dataGridViewBooks.Columns["thoi_gian"].HeaderText = "Thời Gian Nhập";
-                    // Tự động điều chỉnh độ rộng cột theo nội dung
+
                     dataGridViewBooks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 }
             }
@@ -68,8 +68,8 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ThemTuaSach formAdd = new ThemTuaSach(LoadBookList); // Truyền callback để load lại
-            formAdd.Show(); // Dùng ShowDialog để chờ form đóng rồi mới tiếp tục
+            ThemTuaSach formAdd = new ThemTuaSach(LoadBookList);
+            formAdd.Show();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -79,7 +79,6 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
             {
                 int idTuaSach = Convert.ToInt32(dataGridViewBooks.SelectedRows[0].Cells["id_tua_sach"].Value);
 
-                // Pass LoadBookList as the refresh callback
                 SuaTuaSach formSua = new SuaTuaSach(idTuaSach, LoadBookList);
                 formSua.Show();
             }
@@ -95,25 +94,34 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                 {
                     conn.Open();
 
-                    // 1. Set trang_thai = FALSE cho Tua_Sach
-                    string queryUpdateTuaSach = "UPDATE tua_sach SET trang_thai = FALSE WHERE id_tua_sach = @idTuaSach";
+                    // 1. Cập nhật Tua_Sach: set trạng thái FALSE + ngày xóa
+                    string queryUpdateTuaSach = @"
+                UPDATE tua_sach
+                SET trang_thai = FALSE,
+                    ngay_xoa = CURRENT_DATE
+                WHERE id_tua_sach = @idTuaSach";
                     using (NpgsqlCommand cmd = new NpgsqlCommand(queryUpdateTuaSach, conn))
                     {
                         cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
                         cmd.ExecuteNonQuery();
                     }
 
-                    // 2. Set trang_thai = FALSE cho tất cả Dau_Sach có id_tua_sach tương ứng
-                    string queryUpdateDauSach = "UPDATE dau_sach SET trang_thai = FALSE WHERE id_tua_sach = @idTuaSach";
+                    // 2. Cập nhật tất cả Đầu Sách liên quan: set trạng thái FALSE + ngày xóa
+                    string queryUpdateDauSach = @"
+                UPDATE dau_sach
+                SET trang_thai = FALSE,
+                    ngay_xoa = CURRENT_DATE
+                WHERE id_tua_sach = @idTuaSach";
                     using (NpgsqlCommand cmd = new NpgsqlCommand(queryUpdateDauSach, conn))
                     {
                         cmd.Parameters.AddWithValue("@idTuaSach", idTuaSach);
                         cmd.ExecuteNonQuery();
                     }
                 }
-            }
 
-            LoadBookList(); // Refresh danh sách
+                // Load lại danh sách sau khi xóa
+                LoadBookList();
+            }
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -132,6 +140,11 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
         {
             DauSach formDauSach = new DauSach();
             formDauSach.Show();
+        }
+
+        private void begin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

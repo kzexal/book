@@ -534,7 +534,8 @@
             Controls.Add(textboxTenSach);
             Controls.Add(btnLuu);
             Name = "SuaDauSach";
-            Text = "SuaDauSach";
+            Text = "Sửa đầu sách";
+            Load += SuaDauSach_Load;
             ResumeLayout(false);
             PerformLayout();
         }

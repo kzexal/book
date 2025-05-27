@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -18,7 +12,7 @@ namespace book
         public DaXoaTuaSach(Action refreshParent = null)
         {
             InitializeComponent();
-            _refreshParent = refreshParent; // Store the refresh callback
+            _refreshParent = refreshParent;
             Hienthisachdaxoa();
         }
 
@@ -37,18 +31,20 @@ SELECT
     ts.nha_xuat_ban,
     ts.so_luong,
     ts.trang_thai,
-    ts.thoi_gian
+    ts.thoi_gian,
+    ts.ngay_xoa -- thêm dòng này
 FROM Tua_Sach ts
 LEFT JOIN TuaSach_TacGia tgts ON tgts.id_tua_sach = ts.id_tua_sach
 LEFT JOIN Tac_Gia tg ON tg.id_tac_gia = tgts.id_tac_gia
 WHERE ts.trang_thai = FALSE
-GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_ban, ts.so_luong, ts.trang_thai, ts.thoi_gian";
+GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban,
+         ts.nha_xuat_ban, ts.so_luong, ts.trang_thai, ts.thoi_gian, ts.ngay_xoa";
 
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, conn))
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-                    Danhsachdaxoa.DataSource = dt; // Hiển thị dữ liệu lên DataGridView
+                    Danhsachdaxoa.DataSource = dt;
 
                     // Đặt tiêu đề cột
                     Danhsachdaxoa.Columns["id_tua_sach"].HeaderText = "ID";
@@ -60,6 +56,7 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                     Danhsachdaxoa.Columns["so_luong"].HeaderText = "Số lượng";
                     Danhsachdaxoa.Columns["trang_thai"].HeaderText = "Trạng thái";
                     Danhsachdaxoa.Columns["thoi_gian"].HeaderText = "Thời gian nhập";
+                    Danhsachdaxoa.Columns["ngay_xoa"].HeaderText = "Ngày Xoá"; // tiêu đề mới
                 }
             }
         }
@@ -74,9 +71,13 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                 {
                     conn.Open();
                     string query = @"
-    UPDATE tua_sach SET trang_thai = TRUE WHERE id_tua_sach = @idTuaSach;
-    UPDATE dau_sach SET trang_thai = TRUE WHERE id_tua_sach = @idTuaSach;
-";
+    UPDATE tua_sach
+    SET trang_thai = TRUE, ngay_xoa = NULL
+    WHERE id_tua_sach = @idTuaSach;
+
+    UPDATE dau_sach
+    SET trang_thai = TRUE, ngay_xoa = NULL
+    WHERE id_tua_sach = @idTuaSach;";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
@@ -85,18 +86,12 @@ GROUP BY ts.id_tua_sach, ts.ten_sach, ts.the_loai, ts.nam_xuat_ban, ts.nha_xuat_
                     }
                 }
 
-                // Hiển thị thông báo khôi phục thành công
                 MessageBox.Show("Khôi phục thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Làm mới DataGridView trong Deleted form
                 Hienthisachdaxoa();
-
-                // Làm mới DataGridView trong begin form
                 _refreshParent?.Invoke();
             }
             else
             {
-                // Thông báo nếu không có dòng nào được chọn
                 MessageBox.Show("Vui lòng chọn một sách để khôi phục!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

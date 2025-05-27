@@ -263,5 +263,10 @@ namespace book
                 MessageBox.Show("Vui lòng chọn tác giả cần xoá.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void SuaTuaSach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

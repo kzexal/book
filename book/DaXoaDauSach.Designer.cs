@@ -61,7 +61,7 @@
             Controls.Add(btnRestore);
             Controls.Add(datagridviewDauSachDaXoa);
             Name = "DaXoaDauSach";
-            Text = "DaXoaDauSach";
+            Text = "Danh sách xoá đầu sách";
             ((System.ComponentModel.ISupportInitialize)datagridviewDauSachDaXoa).EndInit();
             ResumeLayout(false);
         }

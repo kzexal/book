@@ -748,7 +748,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\buidu\\OneDrive\\Máy tính\\code\\book\\book\\book.csproj",
-      "projectName": "book",
+      "projectName": "Quan ly sach",
       "projectPath": "C:\\Users\\buidu\\OneDrive\\Máy tính\\code\\book\\book\\book.csproj",
       "packagesPath": "C:\\Users\\buidu\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\buidu\\OneDrive\\Máy tính\\code\\book\\book\\obj\\",
@@ -784,7 +784,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -814,7 +814,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

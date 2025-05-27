@@ -110,7 +110,8 @@
             Controls.Add(btnThemDauSach);
             Controls.Add(dataGridViewDauSach);
             Name = "DauSach";
-            Text = "DauSach";
+            Text = "Quản lý đầu sách";
+            Load += DauSach_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewDauSach).EndInit();
             ResumeLayout(false);
         }

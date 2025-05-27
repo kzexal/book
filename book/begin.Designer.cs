@@ -123,7 +123,8 @@
             Controls.Add(btnSua);
             Controls.Add(btnThem);
             Name = "begin";
-            Text = "begin";
+            Text = "Quản lý sách";
+            Load += begin_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooks).EndInit();
             ResumeLayout(false);
         }

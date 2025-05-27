@@ -127,7 +127,7 @@ namespace book
                 {
                     cmd.Parameters.AddWithValue("@ma", ma);
                     long count = (long)cmd.ExecuteScalar();
-                    if (count == 0) break; // Không trùng => dùng được
+                    if (count == 0) break;
                 }
 
                 stt++; // Nếu trùng thì thử tiếp
@@ -177,6 +177,11 @@ namespace book
         private void btnLamMoiDauSach_Click(object sender, EventArgs e)
         {
             LoadDauSachList();
+        }
+
+        private void DauSach_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

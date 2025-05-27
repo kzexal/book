@@ -299,7 +299,8 @@
             Controls.Add(textboxTenSach);
             Controls.Add(btnLuu);
             Name = "SuaTuaSach";
-            Text = "Sua";
+            Text = "Sửa tựa sách";
+            Load += SuaTuaSach_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -201,5 +201,10 @@ namespace book
             InitializeComponent();
             _refreshParent = refreshParent;
         }
+
+        private void ThemTuaSach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

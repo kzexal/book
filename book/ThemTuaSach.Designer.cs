@@ -286,7 +286,8 @@
             Controls.Add(textboxTenSach);
             Controls.Add(btnadd);
             Name = "ThemTuaSach";
-            Text = "Thêm";
+            Text = "Thêm tựa sách";
+            Load += ThemTuaSach_Load;
             ResumeLayout(false);
             PerformLayout();
         }
