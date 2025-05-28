@@ -1,0 +1,7 @@
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\publish\test moi\Quan ly sach.pdb
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\publish\test moi\D3DCompiler_47_cor3.dll
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\publish\test moi\PenImc_cor3.dll
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\publish\test moi\PresentationNative_cor3.dll
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\publish\test moi\vcruntime140_cor3.dll
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\publish\test moi\wpfgfx_cor3.dll
+C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\publish\test moi\Quan ly sach.exe

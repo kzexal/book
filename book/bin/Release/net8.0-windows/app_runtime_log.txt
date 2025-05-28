@@ -1,0 +1,12 @@
+[2025-05-28 12:48:30.588] Application starting...
+[2025-05-28 12:48:30.608] Operating System: Microsoft Windows NT 10.0.26100.0
+[2025-05-28 12:48:30.610] Is 64bit OS: True
+[2025-05-28 12:48:30.613] .NET Version: 8.0.16
+[2025-05-28 12:48:30.614] Current Directory: C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows
+[2025-05-28 12:48:30.614] Base Directory (for log file): C:\Users\buidu\OneDrive\Máy tính\code\book\book\bin\Release\net8.0-windows\
+[2025-05-28 12:48:30.617] User: buidu
+[2025-05-28 12:48:30.650] Global exception handlers registered.
+[2025-05-28 12:48:30.652] Visual styles enabled.
+[2025-05-28 12:48:30.664] Compatible text rendering set to false.
+[2025-05-28 12:48:30.665] Attempting to run main form 'begin'...
+[2025-05-28 12:48:34.891] Application exited normally after Application.Run(new begin()).
